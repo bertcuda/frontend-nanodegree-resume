@@ -29,13 +29,13 @@ var work = {
     "title": "Business System Analyst/Technical Product Manager",
     "location": "Palo Alto, California",
     "dates": "July, 2013 to present",
-    "description": "Lead development and launch of web, mobile and enterprise applications, working closely with marketng product managers, vendors and Scrum development teams creating infrastructure, systems and applications that drive HP computer, web and mobile marketing initiatves."
+    "description": "Lead development and launch of web, mobile and enterprise applications, working closely with marketing product managers, vendors and Scrum development teams creating infrastructure, systems and applications that drive HP computer, web and mobile marketing initiatives."
   }, {
     "employer": "Tyco",
-    "title": "Program Manager/Business System Analyst",
+    "title": "Business System Analyst/Program Manager",
     "location": "Irvine/San Francisco, California",
     "dates": "January, 2009 to June, 2013",
-    "description": "Introduced RFID Internet of Things (IoT) technology solutions into top domestic and international companies including Inditex/Zara, Macy’s and others, resulting in successful, revenue-generting customer engagements. Help customers achieve significant business process innovation and increased sales."
+    "description": "Introduced RFID Internet of Things (IoT) technology solutions into top domestic and international companies including Inditex/Zara, Macy’s and others, resulting in successful, revenue-generating customer engagements. Help customers achieve significant business process innovation and increased sales."
   }, {
     "employer": "Razorfish",
     "title": "Business System Analyst",

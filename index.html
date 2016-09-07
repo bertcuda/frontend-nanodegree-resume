@@ -21,18 +21,17 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     <meta charset="utf-8">
 
     <!-- Tells the browser what the title of this page should be. -->
-    <title>Resume</title>
+    <title>Bert Ciccone Resume</title>
+
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Load the font. -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
 
     <!-- Load the page styles. -->
     <link href="css/style.css" rel="stylesheet">
 
-    <!--
-  Uncomment the <script> tag below when you're ready to add an interactive Google Map to your resume!
-  -->
-    <!-- <script src="http://maps.googleapis.com/maps/api/js?libraries=places"></script> -->
-    <script src="http://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyBjaPt3KgYvdzARDlHRJ2Y4xUTEklUT-T8"></script>
-
-    <meta name="viewport" content="width=device-width,initial-scale=1">
   </head>
 
   <body>
@@ -87,6 +86,9 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   -->
     <script src="js/jQuery.js"></script>
 
+    <!-- Use the Bootstrap framework to change the layout -->
+    <script src="js/bootstrap.min.js"></script>
+
     <!-- More on helper.js in the class -->
     <script src="js/helper.js"></script>
 
@@ -136,6 +138,13 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
         document.getElementById('mapDiv').style.display = 'none';
       }
     </script>
+
+    <!--
+          Uncomment the <script> tag below when you're ready to add an interactive Google Map to your resume!
+          -->
+    <!-- <script src="http://maps.googleapis.com/maps/api/js?libraries=places"></script> -->
+    <script src="http://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyBjaPt3KgYvdzARDlHRJ2Y4xUTEklUT-T8"></script>
+
   </body>
 
 </html>
