@@ -102,42 +102,68 @@ var education = {
 
 console.log(education);
 
-bio.display = function () {
-
-  // Format the Bio
-  $("#header").prepend([HTMLheaderRole.replace("%data%", bio.role)]);
-  $("#header").prepend([HTMLheaderName.replace("%data%", bio.name)]);
-
-  $("#topContacts").append([HTMLmobile.replace("%data%", bio.contacts.mobile)]);
-  $("#topContacts").append([HTMLemail.replace("%data%", bio.contacts.email)]);
-  $("#topContacts").append([HTMLgithub.replace("%data%", bio.contacts.github)]);
-  $("#topContacts").append([HTMLtwitter.replace("%data%", bio.contacts.twitter)]);
-  $("#topContacts").append([HTMLlocation.replace("%data%", bio.contacts.location)]);
-
-  $("#header").append([HTMLbioPic.replace("%data%", bio.bioPic)]);
-  $("#header").append([HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage)]);
-
-  if (bio.skills) {
-    $("#header").append([HTMLskillsStart.replace("%data%", bio.skills)]);
-    for (var iSkill in bio.skills) {
-      $("#skills").append([HTMLskills.replace("%data%", bio.skills[iSkill])]);
-    }
-  }
-
+/* Navigation items */
+var nav = {
+  "navItems": [
+    "P",
+    "E",
+    "Ed",
+    "C"
+  ]
 }
 
-bio.display();
+console.log(nav);
 
-// Format the Work
+// Setup the Bootstrap container
+$("#body").toggleClass(HTMLcontainer, true);
 
+// Format the navigation
+nav.display = function () {
+  $("#nav").toggleClass(HTMLrow, true);
+  for (var iNav in nav.navItems) {
+    $("#nav").append([HTMLnavCol]);
+    $(".navCol:last").append(
+      [HTMLnavItem.replace("%data%", nav.navItems[iNav])]);
+  }
+}
+
+nav.display();
+
+// Format the header
+bio.displayHeader = function () {
+  $("#header").toggleClass(HTMLrow, true);
+  $("#header").append([HTMLheaderCol]);
+  $("#headerCol").append([HTMLbioPic.replace("%data%", bio.bioPic)]);
+  $("#headerCol").append([HTMLheaderName.replace("%data%", bio.name)]);
+  $("#headerCol").append([HTMLheaderRole.replace("%data%", bio.role)]);
+  $("#headerCol").append([HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage)]);
+  $("#headerCol").append([HTMLrule]);
+}
+
+bio.displayHeader();
+
+// Format the skills
+bio.displaySkills = function () {
+  if (bio.skills) {
+    $("#skills").toggleClass(HTMLrow, true);
+    $("#skills").append([HTMLskillsCol]);
+    // $("#header").append([HTMLskillsStart.replace("%data%", bio.skills)]);
+    for (var iSkill in bio.skills) {
+      $("#skillsCol").append([HTMLskill.replace("%data%", bio.skills[iSkill])]);
+    }
+  }
+}
+
+bio.displaySkills();
+
+// Format the work
 work.display = function () {
+  $("#workExperience").toggleClass(HTMLrow, true);
+  $("#workExperience").append([HTMLworkCol]);
   for (var job in work.jobs) {
-    var formattedWorkEmployer;
-    var formattedWorkTitle;
-    $("#workExperience").append([HTMLworkStart]);
-    formattedWorkEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
-    formattedWorkTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
-    $(".work-entry:last").append(formattedWorkEmployer + formattedWorkTitle);
+    $("#workCol").append([HTMLworkStart]);
+    $(".work-entry:last").append([HTMLworkEmployer.replace("%data%", work.jobs[job].employer)]);
+    $(".work-entry:last").append([HTMLworkTitle.replace("%data%", work.jobs[job].title)]);
     $(".work-entry:last").append([HTMLworkDates.replace("%data%", work.jobs[job].dates)]);
     $(".work-entry:last").append([HTMLworkLocation.replace("%data%", work.jobs[job].location)]);
     $(".work-entry:last").append([HTMLworkDescription.replace("%data%", work.jobs[job].description)]);
@@ -146,26 +172,28 @@ work.display = function () {
 
 work.display();
 
+// Format the projects
 projects.display = function () {
-  // Format the Projects
+  $("#projects").toggleClass(HTMLrow, true);
+  $("#projects").append([HTMLprojectCol]);
   for (var iProject in projects.projects) {
-    $("#projects").append([HTMLprojectStart]);
+    $("#projectCol").append([HTMLprojectStart]);
     $(".project-entry:last").append([HTMLprojectTitle.replace("%data%", projects.projects[iProject].title)]);
     $(".project-entry:last").append([HTMLprojectDates.replace("%data%", projects.projects[iProject].dates)]);
     $(".project-entry:last").append([HTMLprojectDescription.replace("%data%", projects.projects[iProject].description)]);
     for (var iImage in projects.projects[iProject].images)
       $(".project-entry:last").append([HTMLprojectImage.replace("%data%", projects.projects[iProject].images[iImage])]);
   }
-
 }
 
 projects.display();
 
+// Format the education
 education.display = function () {
-
-  // Format the Education
+  $("#education").toggleClass(HTMLrow, true);
+  $("#education").append([HTMLschoolsCol]);
   for (var iSchool in education.schools) {
-    $("#education").append([HTMLschoolStart]);
+    $("#educationCol").append([HTMLschoolStart]);
     $(".education-entry:last").append([HTMLschoolName.replace("%data%", education.schools[iSchool].name)]);
     $(".education-entry:last").append([HTMLschoolLocation.replace("%data%", education.schools[iSchool].location)]);
     $(".education-entry:last").append([HTMLschoolDegree.replace("%data%", education.schools[iSchool].degree)]);
@@ -175,28 +203,43 @@ education.display = function () {
     $(".education-entry:last").append([HTMLschoolDates.replace("%data%", education.schools[iSchool].dates)]);
     $(".education-entry:last").append([HTMLonlineURL.replace("%data%", education.schools[iSchool].url)]);
   }
-
-  // Format the Online Classes
-  $("#education").append([HTMLonlineClasses]);
+  // Format the online courses
+  $(".education-entry:last").append([HTMLonlineClasses]);
   for (var iCourse in education.onlineCourses) {
-    var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[iCourse].title);
-    var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[iCourse].school);
-    $("#education").append([HTMLschoolStart]);
-    $(".education-entry:last").append(formattedOnlineTitle + formattedOnlineSchool);
+    $(".education-entry:last").append([HTMLonlineTitle.replace("%data%", education.onlineCourses[iCourse].title)]);
+    $(".education-entry:last").append([HTMLonlineSchool.replace("%data%", education.onlineCourses[iCourse].school)]);
     $(".education-entry:last").append([HTMLonlineDates.replace("%data%", education.onlineCourses[iCourse].dates)]);
     $(".education-entry:last").append([HTMLonlineURL.replace("%data%", education.onlineCourses[iCourse].url)]);
   }
-
 }
 
 education.display();
 
+// Format the map
+$("#theMap").toggleClass(HTMLrow, true);
+$("#theMap").append([HTMLmapCol]);
+$("#mapDiv").append([HTMLmapHeading]);
 $("#mapDiv").append(googleMap);
 
+// Format the contacts
+$("#contacts").toggleClass(HTMLrow, true);
+$("#contacts").append([HTMLcontactsCol]);
+bio.displayContacts = function () {
+  $("#contactsCol").append([HTMLmobile.replace("%data%", bio.contacts.mobile)]);
+  $("#contactsCol").append([HTMLemail.replace("%data%", bio.contacts.email)]);
+  $("#contactsCol").append([HTMLgithub.replace("%data%", bio.contacts.github)]);
+  $("#contactsCol").append([HTMLtwitter.replace("%data%", bio.contacts.twitter)]);
+  $("#contactsCol").append([HTMLlocation.replace("%data%", bio.contacts.location)]);
+}
+
+bio.displayContacts();
+
+// Turn on the click tracking
 $(document).click(function (loc) {
   logClicks(event.pageX, event.pageY);
 });
 
+// Format the internationalization of the name
 $("#main").append([internationalizeButton]);
 
 function inName(myName) {

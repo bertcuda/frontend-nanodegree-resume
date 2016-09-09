@@ -26,44 +26,45 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <!-- Load the font. -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
-
-    <!-- Load the page styles. -->
+    <!-- Load the page styles, bootstrap and fonts. -->
     <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
 
   </head>
 
-  <body>
-    <div id="main">
-      <!--
+  <body id="body">
+    <!--
     Everything from here to the <script> tag below is the skeleton of your
     website. Your code will add information to each of the sections of the
     resume below. You can pretty easily figure out what each section will
     display by looking at the id or at what's written between the <h2> tags.
     -->
-      <div id="header" class="center-content clear-fix">
+    <nav id="nav">
+    </nav>
+    <main id="main">
+      <header id="header">
+      </header>
+      <!-- <div style="clear: both;"></div> -->
+      <section id="skills">
+      </section>
+      <section id="workExperience">
+      </section>
+      <aside id="projects">
+      </aside>
+      <section id="education">
+      </section>
+      <aside id="theMap">
+      </aside>
+      <aside id="contacts">
         <ul id="topContacts" class="flex-box"></ul>
-      </div>
-      <div style="clear: both;"></div>
-      <div id="workExperience" class="gray">
-        <h2>Work Experience</h2>
-      </div>
-      <div id="projects">
-        <h2>Projects</h2>
-      </div>
-      <div id="education" class="gray">
-        <h2>Education</h2>
-      </div>
-      <div id="mapDiv">
-        <h2>Where I've Lived and Worked</h2>
-      </div>
-      <div id="lets-connect" class="dark-gray">
-        <h2 class="orange center-text">Let's Connect</h2>
-        <ul id="footerContacts" class="flex-box">
-        </ul>
-      </div>
-    </div>
+      </aside>
+    </main>
+    <footer id="lets-connect">
+      <h2 class="orange center-text">Let's Connect</h2>
+      <ul id="footerContacts" class="flex-box">
+      </ul>
+    </footer>
 
     <!-- "HTML is loaded by the browser in the order it appears in the file. If the JavaScript is loaded first and it is supposed to affect the HTML below it, it might not work, as the JavaScript would be loaded before the HTML it is supposed to work on. Therefore, putting JavaScript near the bottom of the HTML page is often the best strategy."
   https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/JavaScript_basics -->
