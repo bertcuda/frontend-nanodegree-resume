@@ -18,7 +18,7 @@ var HTMLrow = 'row';
 
 // Navigation helper variables
 var HTMLnavCol = '<div class="navCol col-xs-3">';
-var HTMLnavItem = '<span class="navItem">%data%</span>';
+var HTMLnavItem = '<span class="navItem %data%" aria-hidden="true"></span>';
 
 // Header helper variables
 var HTMLheaderCol = '<div id="headerCol" class="col-xs-12"></div>';

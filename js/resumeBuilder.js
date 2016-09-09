@@ -105,10 +105,10 @@ console.log(education);
 /* Navigation items */
 var nav = {
   "navItems": [
-    "P",
-    "E",
-    "Ed",
-    "C"
+    "fa fa-user fa-2x",
+    "fa fa-briefcase fa-2x",
+    "fa fa-graduation-cap fa-2x",
+    "fa fa-envelope fa-2x"
   ]
 }
 
