@@ -1,8 +1,9 @@
 /* Global Styles */
 
-* {
+
+/** {
   outline: 1px solid red !important;
-}
+}*/
 
 
 /* Colors
@@ -19,62 +20,51 @@
   "rgba(15, 155, 90, 1)"
   */
 
-body
-/*, div, ul, li, p, h1, h2, h3, h4, h5, h6 */
-
-{
-  /*padding: 0;
-  margin: 0;*/
+body {
   font-family: "Roboto", sans-serif;
+}
+
+#body {
+  background-color: rgba(218, 247, 220, 1);
+}
+
+h1 {
+  font-size: 4em;
 }
 
 h2 {
   font-weight: bold;
-  font-size: 24px;
-  color: #999;
+  font-size: 3em;
+  color: rgba(57, 94, 102, 1);
   line-height: 29px;
-  /*padding: 10px;*/
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 h3 {
   font-style: italic;
-  font-size: 20px;
-  color: #000;
+  font-size: 2em;
+  color: rgba(57, 94, 102, 1);
   line-height: 22px;
 }
 
 h4 {
   font-weight: bold;
-  font-size: 14px;
-  color: #4a4a4a;
+  font-size: 1em;
+  color: rgba(57, 94, 102, 1);
   line-height: 17px;
 }
 
-h2, h3, h4, h5 {
-  /*padding: 10px 5%;*/
-}
-
 p {
-  font-size: 14px;
-  color: rgba(47, 72, 88, 1);
-  line-height: 21px;
+  font-size: 1em;
+  color: rgba(57, 94, 102, 1);
+  line-height: 1.2em;
 }
 
 a {
-  color: #1199c3;
+  color: rgba(57, 94, 102, 1);
   text-decoration: none;
-  /*margin-top: 10px;*/
   display: block;
-}
-
-
-/*.clear-fix {
-  overflow: auto;
-}
-*/
-
-.education-entry, .work-entry, .project-entry {
-  /*padding: 0 5%;*/
 }
 
 .date-text {
@@ -82,7 +72,6 @@ a {
   font-size: 14px;
   color: #999;
   line-height: 16px;
-  float: left;
 }
 
 .location-text {
@@ -90,42 +79,19 @@ a {
   font-size: 14px;
   color: #999;
   line-height: 16px;
-  float: right;
-}
-
-.orange {
-  background-color: #f5ae23;
-}
-
-.orange-text {
-  color: #f5ae23;
-}
-
-.white-text {
-  font-weight: bold;
-  color: #fff;
-}
-
-.gray {
-  background-color: #f3f3f3;
-  /*padding-bottom: 10px;*/
-  clear: both;
-}
-
-.dark-gray {
-  background-color: #4a4a4a;
 }
 
 ul {
   list-style-type: none;
 }
 
-img {
-  /*padding: 10px;*/
-}
-
 span {
   /*padding: 5px;*/
+}
+
+.entry-icon {
+  color: rgba(57, 94, 102, 1);
+  background-color: rgba(218, 247, 220, 1);
 }
 
 
@@ -136,6 +102,11 @@ span {
   padding-right: 0 !important;
 }
 
+.tabList {
+  list-style: none;
+  padding-left: 0;
+}
+
 .navItem {
   display: block;
   text-align: center;
@@ -143,11 +114,24 @@ span {
   padding-top: 1em;
   padding-bottom: 1em;
   width: 100%;
+}
+
+.bg-user {
+  background-color: rgba(57, 94, 102, 1);
+}
+
+.bg-briefcase {
   background-color: rgba(56, 125, 122, 1);
 }
 
-#body {
-  background-color: rgba(218, 247, 220, 1);
+.bg-graduation-cap {
+  background-color: rgba(50, 147, 111, 1);
+}
+
+.bg-envelope {
+  background-color: rgba(38, 169, 108, 1);
+  /*background-color: rgba(218, 247, 220, 1);
+  color: rgba(38, 169, 108, 1);*/
 }
 
 
@@ -160,7 +144,7 @@ span {
 
 #name {
   font-size: 40px;
-  color: rgba(47, 72, 88, 1);
+  color: rgba(57, 94, 102, 1);
   line-height: 48px;
   display: block;
   /*margin-top: 48px;*/
@@ -169,19 +153,22 @@ span {
 .welcome-message {
   font-style: italic;
   font-size: 18px;
-  color: rgba(47, 72, 88, 1);
+  color: rgba(57, 94, 102, 1);
   line-height: 28px;
 }
 
-#skills-h3 {
-  color: #f5ae23;
+.biopic {
+  padding-top: 2em;
+  /*float: left;*/
+  /*width: 200px;*/
   /*display: none;*/
 }
 
-.biopic {
-  /*float: left;*/
-  /*padding: 10px;*/
-  /*width: 200px;*/
+
+/* Skills Styles */
+
+#skills-h3 {
+  color: #f5ae23;
   /*display: none;*/
 }
 
@@ -211,6 +198,21 @@ span {
 }*/
 
 
+/* Map Styles */
+
+#map {
+  display: block;
+  height: 100%;
+  margin: 0 5%;
+}
+
+#mapDiv {
+  height: 300px;
+  width: 100%;
+  padding-bottom: 5%;
+}
+
+
 /* Footer Styles */
 
 #lets-connect {
@@ -220,19 +222,22 @@ span {
 
 /* Responsive Styles */
 
-@media only screen and (max-width: 1024px) {
-  #lets-connect {
-    /*margin-top: 5%;*/
+@media only screen and (max-width: 767px) {
+  h1, h2, h3, h4 {
+    text-align: center;
   }
-}
-
-@media only screen and (max-width:900px) {
-  .biopic {
-    /*width: 175px;*/
+  .role-entry, .welcome-message {
+    text-align: center;
   }
-}
-
-@media only screen and (max-width: 750px) {
+  .skills-entry, .education-entry, .work-entry, .project-entry {
+    text-align: center;
+  }
+  .date-text {
+    /*float: left;*/
+  }
+  .location-text {
+    /*float: right;*/
+  }
   #lets-connect {
     margin-top: 10%;
   }
@@ -244,20 +249,28 @@ span {
   }
 }
 
-#map {
-  display: block;
-  height: 100%;
-  margin: 0 5%;
-}
-
-#mapDiv {
-  height: 400px;
-  width: 100%;
-  padding-bottom: 5%;
-}
-
-@media only screen and (min-width: 750px) {
+@media only screen and (min-width: 768px) {
   #skills-h3, .biopic {
     /*display: block;*/
   }
+  .date-text {
+    float: left;
+  }
+  .location-text {
+    float: right;
+  }
 }
+
+@media only screen and (min-width: 992) {
+  .date-text {
+    float: left;
+  }
+  .location-text {
+    float: right;
+  }
+  #lets-connect {
+    /*margin-top: 5%;*/
+  }
+}
+
+@media only screen and (min-width: 1200px) {}

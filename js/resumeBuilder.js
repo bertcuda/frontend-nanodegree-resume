@@ -102,29 +102,18 @@ var education = {
 
 console.log(education);
 
-/* Navigation items */
-var nav = {
-  "navItems": [
-    "fa fa-user fa-2x",
-    "fa fa-briefcase fa-2x",
-    "fa fa-graduation-cap fa-2x",
-    "fa fa-envelope fa-2x"
-  ]
-}
-
-console.log(nav);
-
 // Setup the Bootstrap container
 $("#body").toggleClass(HTMLcontainer, true);
 
 // Format the navigation
 nav.display = function () {
   $("#nav").toggleClass(HTMLrow, true);
-  for (var iNav in nav.navItems) {
-    $("#nav").append([HTMLnavCol]);
-    $(".navCol:last").append(
-      [HTMLnavItem.replace("%data%", nav.navItems[iNav])]);
-  }
+  $("#nav").append([HTMLtabs]);
+  $("#tabs").append([HTMLtabList]);
+  $(".tabList:last").append([HTMLnavProfile]);
+  $(".tabList:last").append([HTMLnavWork]);
+  $(".tabList:last").append([HTMLnavEducation]);
+  $(".tabList:last").append([HTMLnavContact]);
 }
 
 nav.display();
@@ -136,7 +125,8 @@ bio.displayHeader = function () {
   $("#headerCol").append([HTMLbioPic.replace("%data%", bio.bioPic)]);
   $("#headerCol").append([HTMLheaderName.replace("%data%", bio.name)]);
   $("#headerCol").append([HTMLheaderRole.replace("%data%", bio.role)]);
-  $("#headerCol").append([HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage)]);
+  $("#headerCol").append(
+    [HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage)]);
   $("#headerCol").append([HTMLrule]);
 }
 
@@ -147,10 +137,9 @@ bio.displaySkills = function () {
   if (bio.skills) {
     $("#skills").toggleClass(HTMLrow, true);
     $("#skills").append([HTMLskillsCol]);
-    // $("#header").append([HTMLskillsStart.replace("%data%", bio.skills)]);
-    for (var iSkill in bio.skills) {
-      $("#skillsCol").append([HTMLskill.replace("%data%", bio.skills[iSkill])]);
-    }
+    bio.skills.forEach(function (skill) {
+      $("#skillsCol").append([HTMLskill.replace("%data%", skill)]);
+    })
   }
 }
 
@@ -160,14 +149,18 @@ bio.displaySkills();
 work.display = function () {
   $("#workExperience").toggleClass(HTMLrow, true);
   $("#workExperience").append([HTMLworkCol]);
-  for (var job in work.jobs) {
+  work.jobs.forEach(function (job) {
     $("#workCol").append([HTMLworkStart]);
-    $(".work-entry:last").append([HTMLworkEmployer.replace("%data%", work.jobs[job].employer)]);
-    $(".work-entry:last").append([HTMLworkTitle.replace("%data%", work.jobs[job].title)]);
-    $(".work-entry:last").append([HTMLworkDates.replace("%data%", work.jobs[job].dates)]);
-    $(".work-entry:last").append([HTMLworkLocation.replace("%data%", work.jobs[job].location)]);
-    $(".work-entry:last").append([HTMLworkDescription.replace("%data%", work.jobs[job].description)]);
-  }
+    $(".work-entry:last").append([HTMLworkIcon]);
+    $(".work-entry:last").append(
+      [HTMLworkEmployer.replace("%data%", job.employer)]);
+    $(".work-entry:last").append([HTMLworkTitle.replace("%data%", job.title)]);
+    $(".work-entry:last").append([HTMLworkDates.replace("%data%", job.dates)]);
+    $(".work-entry:last").append(
+      [HTMLworkLocation.replace("%data%", job.location)]);
+    $(".work-entry:last").append(
+      [HTMLworkDescription.replace("%data%", job.description)]);
+  })
 }
 
 work.display();
@@ -176,14 +169,19 @@ work.display();
 projects.display = function () {
   $("#projects").toggleClass(HTMLrow, true);
   $("#projects").append([HTMLprojectCol]);
-  for (var iProject in projects.projects) {
+  projects.projects.forEach(function (project) {
     $("#projectCol").append([HTMLprojectStart]);
-    $(".project-entry:last").append([HTMLprojectTitle.replace("%data%", projects.projects[iProject].title)]);
-    $(".project-entry:last").append([HTMLprojectDates.replace("%data%", projects.projects[iProject].dates)]);
-    $(".project-entry:last").append([HTMLprojectDescription.replace("%data%", projects.projects[iProject].description)]);
-    for (var iImage in projects.projects[iProject].images)
-      $(".project-entry:last").append([HTMLprojectImage.replace("%data%", projects.projects[iProject].images[iImage])]);
-  }
+    $(".project-entry:last").append(
+      [HTMLprojectTitle.replace("%data%", project.title)]);
+    $(".project-entry:last").append(
+      [HTMLprojectDates.replace("%data%", project.dates)]);
+    $(".project-entry:last").append(
+      [HTMLprojectDescription.replace("%data%", project.description)]);
+    project.images.forEach(function (image) {
+      $(".project-entry:last").append(
+        [HTMLprojectImage.replace("%data%", image)]);
+    })
+  })
 }
 
 projects.display();
@@ -192,34 +190,44 @@ projects.display();
 education.display = function () {
   $("#education").toggleClass(HTMLrow, true);
   $("#education").append([HTMLschoolsCol]);
-  for (var iSchool in education.schools) {
+
+  education.schools.forEach(function (school) {
     $("#educationCol").append([HTMLschoolStart]);
-    $(".education-entry:last").append([HTMLschoolName.replace("%data%", education.schools[iSchool].name)]);
-    $(".education-entry:last").append([HTMLschoolLocation.replace("%data%", education.schools[iSchool].location)]);
-    $(".education-entry:last").append([HTMLschoolDegree.replace("%data%", education.schools[iSchool].degree)]);
-    for (var iMajor in education.schools[iSchool].majors) {
-      $(".education-entry:last").append([HTMLschoolMajor.replace("%data%", education.schools[iSchool].majors[iMajor])]);
-    }
-    $(".education-entry:last").append([HTMLschoolDates.replace("%data%", education.schools[iSchool].dates)]);
-    $(".education-entry:last").append([HTMLonlineURL.replace("%data%", education.schools[iSchool].url)]);
-  }
+    $(".education-entry:last").append(
+      [HTMLschoolName.replace("%data%", school.name)]);
+    $(".education-entry:last").append(
+      [HTMLschoolLocation.replace(
+        "%data%", school.location)]);
+    $(".education-entry:last").append(
+      [HTMLschoolDegree.replace("%data%", school.degree)]);
+
+    school.majors.forEach(function (major) {
+      $(".education-entry:last").append(
+        [HTMLschoolMajor.replace("%data%", major)]);
+    })
+
+    $(".education-entry:last").append(
+      [HTMLschoolDates.replace("%data%", school.dates)]);
+    $(".education-entry:last").append(
+      [HTMLonlineURL.replace("%data%", school.url)]);
+  })
+
   // Format the online courses
   $(".education-entry:last").append([HTMLonlineClasses]);
-  for (var iCourse in education.onlineCourses) {
-    $(".education-entry:last").append([HTMLonlineTitle.replace("%data%", education.onlineCourses[iCourse].title)]);
-    $(".education-entry:last").append([HTMLonlineSchool.replace("%data%", education.onlineCourses[iCourse].school)]);
-    $(".education-entry:last").append([HTMLonlineDates.replace("%data%", education.onlineCourses[iCourse].dates)]);
-    $(".education-entry:last").append([HTMLonlineURL.replace("%data%", education.onlineCourses[iCourse].url)]);
-  }
+
+  education.onlineCourses.forEach(
+    function (course) {
+      $(".education-entry:last").append(
+        [HTMLonlineTitle.replace("%data%", course.title)]);
+      $(".education-entry:last").append(
+        [HTMLonlineSchool.replace("%data%", course.school)]);
+      $(".education-entry:last").append(
+        [HTMLonlineDates.replace("%data%", course.dates)]);
+      $(".education-entry:last").append(
+        [HTMLonlineURL.replace("%data%", course.url)]);
+    })
 }
-
 education.display();
-
-// Format the map
-$("#theMap").toggleClass(HTMLrow, true);
-$("#theMap").append([HTMLmapCol]);
-$("#mapDiv").append([HTMLmapHeading]);
-$("#mapDiv").append(googleMap);
 
 // Format the contacts
 $("#contacts").toggleClass(HTMLrow, true);
@@ -228,11 +236,18 @@ bio.displayContacts = function () {
   $("#contactsCol").append([HTMLmobile.replace("%data%", bio.contacts.mobile)]);
   $("#contactsCol").append([HTMLemail.replace("%data%", bio.contacts.email)]);
   $("#contactsCol").append([HTMLgithub.replace("%data%", bio.contacts.github)]);
-  $("#contactsCol").append([HTMLtwitter.replace("%data%", bio.contacts.twitter)]);
+  $("#contactsCol").append(
+    [HTMLtwitter.replace("%data%", bio.contacts.twitter)]);
   $("#contactsCol").append([HTMLlocation.replace("%data%", bio.contacts.location)]);
 }
 
 bio.displayContacts();
+
+// Format the map
+$("#theMap").toggleClass(HTMLrow, true);
+$("#theMap").append([HTMLmapCol]);
+$("#mapDiv").append([HTMLmapHeading]);
+$("#mapDiv").append(googleMap);
 
 // Turn on the click tracking
 $(document).click(function (loc) {
