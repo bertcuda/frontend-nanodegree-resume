@@ -202,12 +202,10 @@ span {
 
 #map {
   display: block;
-  height: 100%;
   margin: 0 5%;
 }
 
 #mapDiv {
-  height: 300px;
   width: 100%;
   padding-bottom: 5%;
 }
@@ -238,14 +236,17 @@ span {
   .location-text {
     /*float: right;*/
   }
-  #lets-connect {
-    margin-top: 10%;
-  }
   .biopic {
     /*width: 150px;*/
   }
   .welcome-message {
     /*display: none;*/
+  }
+  #mapDiv {
+    height: 300px;
+  }
+  #map {
+    height: 62%;
   }
 }
 
@@ -262,6 +263,12 @@ span {
   .location-text {
     float: right;
   }
+  #mapDiv {
+    height: 350px;
+  }
+  #map {
+    height: 82%;
+  }
 }
 
 @media only screen and (min-width: 992) {
@@ -271,9 +278,19 @@ span {
   .location-text {
     float: right;
   }
-  #lets-connect {
-    /*margin-top: 5%;*/
+  #mapDiv {
+    height: 350px;
+  }
+  #map {
+    height: 82%;
   }
 }
 
-@media only screen and (min-width: 1200px) {}
+@media only screen and (min-width: 1200px) {
+  #mapDiv {
+    height: 350px;
+  }
+  #map {
+    height: 82%;
+  }
+}
