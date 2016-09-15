@@ -1,9 +1,8 @@
 /* Global Styles */
 
-
-/** {
+* {
   outline: 1px solid red !important;
-}*/
+}
 
 
 /* Colors
@@ -20,11 +19,8 @@
   "rgba(15, 155, 90, 1)"
   */
 
-body {
-  font-family: "Roboto", sans-serif;
-}
-
 #body {
+  font-family: "Roboto", sans-serif;
   background-color: rgba(218, 247, 220, 1);
 }
 
@@ -134,6 +130,10 @@ span {
   color: rgba(38, 169, 108, 1);*/
 }
 
+.entry-icon {
+  width: 45px;
+}
+
 
 /* Header Styles */
 
@@ -229,7 +229,7 @@ span {
   .role-entry, .welcome-message {
     text-align: center;
   }
-  .skills-entry, .education-entry, .work-entry, .project-entry {
+  .skills-entry, .work-entry, .project-entry, .education-entry, .course-entry, .contact-entry {
     text-align: center;
   }
   .date-text {
@@ -250,6 +250,9 @@ span {
 }
 
 @media only screen and (min-width: 768px) {
+  .entry-icon {
+    text-align: center;
+  }
   #skills-h3, .biopic {
     /*display: block;*/
   }
