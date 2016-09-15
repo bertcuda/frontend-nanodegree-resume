@@ -78,14 +78,14 @@ var education = {
     "location": "Los Angeles, California",
     "degree": "MBA",
     "majors": ["Information Systems", "Entrepreneurship"],
-    "dates": "", // intentionally left blank
+    "dates": "January, 2002 to January, 2004", // intentionally left blank
     "url": "http://usc.edu"
   }, {
     "name": "California State University",
     "location": "Northridge, California",
     "degree": "BS",
     "majors": ["Computer Science"],
-    "dates": "", // intentionally left blank
+    "dates": "January, 1998 to January, 2002", // intentionally left blank
     "url": "http://csun.edu"
   }],
   "onlineCourses": [{
@@ -277,6 +277,12 @@ education.display = function () {
 
 education.display();
 
+// Format the map
+$("#theMap").addClass(HTMLrow);
+$("#theMap").append([HTMLmapCol]);
+$("#mapDiv").append([HTMLmapHeading]);
+$("#mapDiv").append(googleMap);
+
 // Format the contacts
 bio.displayContacts = function () {
   // Format the row and columns
@@ -286,10 +292,11 @@ bio.displayContacts = function () {
   // Format the contact row, column and content
   $("#contactHeadingCol").append([HTMLcontactRow]);
   $(".contact-row:last").append([HTMLcontactStart]);
-  $(".contact-entry:last").append([HTMLcontactBlankCol]);
+  // $(".contact-entry:last").append([HTMLcontactBlankCol]);
   $(".contact-entry:last").append([HTMLcontactIconCol]);
   $(".contact-entry:last").append([HTMLcontactEntryCol]);
 
+  $(".contact-entry:last .contact-icon-col").addClass("col-sm-offset-3");
   $(".contact-entry:last .contact-icon-col").append([HTMLmobileIcon]);
   $(".contact-entry:last .contact-entry-col").append([HTMLcontact.replace("%data%", bio.contacts.mobile)]);
 
@@ -303,10 +310,10 @@ bio.displayContacts = function () {
   // Format the contact row, column and content
   $("#contactHeadingCol").append([HTMLcontactRow]);
   $(".contact-row:last").append([HTMLcontactStart]);
-  $(".contact-entry:last").append([HTMLcontactBlankCol]);
   $(".contact-entry:last").append([HTMLcontactIconCol]);
   $(".contact-entry:last").append([HTMLcontactEntryCol]);
 
+  $(".contact-entry:last .contact-icon-col").addClass("col-sm-offset-3");
   $(".contact-entry:last .contact-icon-col").append([HTMLtwitterIcon]);
   $(".contact-entry:last .contact-entry-col").append([HTMLcontact.replace("%data%", bio.contacts.twitter)]);
 
@@ -320,10 +327,10 @@ bio.displayContacts = function () {
   // Format the contact row, column and content
   $("#contactHeadingCol").append([HTMLcontactRow]);
   $(".contact-row:last").append([HTMLcontactStart]);
-  $(".contact-entry:last").append([HTMLcontactBlankCol]);
   $(".contact-entry:last").append([HTMLcontactIconCol]);
   $(".contact-entry:last").append([HTMLcontactEntryCol]);
 
+  $(".contact-entry:last .contact-icon-col").addClass("col-sm-offset-3");
   $(".contact-entry:last .contact-icon-col").append([HTMLblogIcon]);
   $(".contact-entry:last .contact-entry-col").append([HTMLcontact.replace("%data%", bio.contacts.blog)]);
 
@@ -336,12 +343,6 @@ bio.displayContacts = function () {
 };
 
 bio.displayContacts();
-
-// Format the map
-$("#theMap").addClass(HTMLrow);
-$("#theMap").append([HTMLmapCol]);
-$("#mapDiv").append([HTMLmapHeading]);
-$("#mapDiv").append(googleMap);
 
 // Format the internationalization of the name
 $("#lets-connect").addClass(HTMLrow);

@@ -98,11 +98,18 @@ var HTMLcourseTitle = '<a href="#">%data%</a>';
 var HTMLcourseSchool = '<a href="#">%data%</a>';
 var HTMLcourseURL = '<br><a href="#">%data%</a>';
 
+// Map helper variables
+var HTMLmapCol = '<div id="mapDiv" class="col-xs-12"></div>';
+var HTMLmapHeading = '<h2><a href="#">Places Where I\'ve Lived and Worked</a></h2>';
+var googleMap = '<div id="map"></div>';
+
+var HTMLintlCol = '<div id="intlCol" class="col-xs-12"></div>';
+var intlButton = '<button>Internationalize</button>';
+
 // Contact helper variables
 var HTMLcontactHeadingCol = '<div id="contactHeadingCol" class="col-xs-12"><h2><a href="#">Contact</a></h2></div>';
 var HTMLcontactRow = '<div class="row contact-row"</div>';
 var HTMLcontactStart = '<div class="contact-entry"></div>';
-var HTMLcontactBlankCol = '<div class="contact-blank-col col-xs-12 col-sm-3"></div>';
 var HTMLcontactIconCol = '<div class="contact-icon-col col-xs-12 col-sm-1"></div>';
 var HTMLcontactEntryCol = '<div class="contact-entry-col col-xs-12 col-sm-3"></div>';
 var HTMLmobileIcon = '<span class = "fa fa-mobile fa-2x entry-icon"></span>'
@@ -112,14 +119,6 @@ var HTMLgithubIcon = '<span class = "fa fa-github fa-2x entry-icon"></span>'
 var HTMLblogIcon = '<span class = "fa fa-external-link-square fa-2x entry-icon"></span>'
 var HTMLlocationIcon = '<span class = "fa fa-map-marker fa-2x entry-icon"></span>'
 var HTMLcontact = '<div class="entry-info">%data%</div>';
-
-// Map helper variables
-var HTMLmapCol = '<div id="mapDiv" class="col-xs-12"></div>';
-var HTMLmapHeading = '<h2><a href="#">Places Where I\'ve Lived and Worked</a></h2>';
-var googleMap = '<div id="map"></div>';
-
-var HTMLintlCol = '<div id="intlCol" class="col-xs-12"></div>';
-var intlButton = '<button>Internationalize</button>';
 
 /*
 The Internationalize Names challenge found in the lesson Flow Control from JavaScript Basics requires you to create a function that will need this helper code to run. Don't delete! It hooks up your code to the button you'll be appending.
