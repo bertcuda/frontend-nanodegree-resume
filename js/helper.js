@@ -52,7 +52,7 @@ var HTMLworkDates = '<p class="date-text">%data%</p>';
 var HTMLworkIcon = '<a class = "fa fa-briefcase fa-2x entry-icon" href="#"></a>'
 var HTMLworkTitle = '<a class="title-text" href="#">%data%</a>';
 var HTMLworkEmployer = '<span class="employer-text"><a href="#">%data%</a></span>';
-var HTMLworkLocation = '<a class="location-text" href="#">%data%</a>';
+var HTMLworkLocation = '<span class="location-text"<a href="#">%data%</a></span>';
 var HTMLworkDescription = '<p><br>%data%</p>';
 
 // Projects helper variables
