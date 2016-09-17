@@ -206,7 +206,10 @@ ul {
 
 /* Responsive Styles */
 
-@media only screen and (max-width: 767px) {
+
+/* Styles for bootstrap xs and sm */
+
+@media only screen and (max-width: 991px) {
   h1, h2, h3, h4 {
     text-align: center;
   }
@@ -227,34 +230,13 @@ ul {
   }
 }
 
-@media only screen and (min-width: 768px) {
-  .entry-icon {
-    text-align: center;
-  }
-  .location-text {
-    float: right;
-  }
-  #mapDiv {
-    height: 350px;
-  }
-  #map {
-    height: 82%;
-  }
-}
+
+/* Styles for bootstrap md and lg */
 
 @media only screen and (min-width: 992) {
   .location-text {
     float: right;
   }
-  #mapDiv {
-    height: 350px;
-  }
-  #map {
-    height: 82%;
-  }
-}
-
-@media only screen and (min-width: 1200px) {
   #mapDiv {
     height: 350px;
   }

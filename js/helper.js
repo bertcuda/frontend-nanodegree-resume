@@ -15,7 +15,7 @@ replace the %data% placeholder text you see in them.
 // Global helper variables
 var HTMLcontainer = 'container';
 var HTMLrow = 'row';
-var HTMLiconOffset = 'col-sm-offset-3';
+var HTMLiconOffset = 'col-md-offset-3';
 
 // Navigation helper variables
 var HTMLtabs = '<div id="tabs"></div>';
@@ -26,9 +26,9 @@ var HTMLnavEducation = '<li><div class="navCol col-xs-3"><a href="#education-hea
 var HTMLnavContact = '<li><div class="navCol col-xs-3"><a href="#connect-heading-col" class="navItem fa fa-envelope fa-2x bg-envelope" aria-hidden="true"></a></div></li>';
 
 // Header helper variables
-var HTMLpicCol = '<div id="picCol" class="col-xs-12 col-sm-4"></div>';
-var HTMLbioCol = '<div id="bioCol" class="col-xs-12 col-sm-8"></div>';
-var HTMLruleCol = '<div id="ruleCol" class="col-xs-12 col-sm-12"><hr></div>';
+var HTMLpicCol = '<div id="picCol" class="col-xs-12 col-md-4"></div>';
+var HTMLbioCol = '<div id="bioCol" class="col-xs-12 col-md-8"></div>';
+var HTMLruleCol = '<div id="ruleCol" class="col-xs-12 col-md-12"><hr></div>';
 var HTMLbioPic = '<a href="#"><img src="%data%" class="biopic img-responsive center-block"></a>';
 var HTMLheaderName = '<h1 id="name"><a href="#">%data%</a></h1>';
 var HTMLheaderRole = '<h3 class="role-entry">%data%</h3>';
@@ -36,18 +36,18 @@ var HTMLwelcomeMsg = '<p class="welcome-message">%data%</p>';
 
 // Skills helper variables
 var HTMLskillsHeadingCol = '<div id="skills-heading-col" class="col-xs-12"><h2><a href="#">Skills at a Glance</a></h2></div>';
-var HTMLskillsCol1 = '<div id="skillsCol1" class="col-xs-12 col-sm-4 col-sm-offset-4"></div>';
-var HTMLskillsCol2 = '<div id="skillsCol2" class="col-xs-12 col-sm-4"></div>';
+var HTMLskillsCol1 = '<div id="skillsCol1" class="col-xs-12 col-md-4 col-md-offset-4"></div>';
+var HTMLskillsCol2 = '<div id="skillsCol2" class="col-xs-12 col-md-4"></div>';
 var HTMLskill = '<p class="skills-entry">%data%</p>';
 
 // Work helper variables
 var HTMLworkHeadingCol = '<div id="work-heading-col" class="col-xs-12"><h2><a href="#">Work Experience</a></h2></div>';
 var HTMLworkStart = '<div class="work-entry"></div>';
-var HTMLworkDatesCol = '<div class="work-dates-col col-xs-12 col-sm-3"></div>';
-var HTMLworkIconCol = '<div class="work-icon-col col-xs-12 col-sm-1"></div>';
-var HTMLworkTitleCol = '<div class="work-title-col col-xs-12 col-sm-4"></div>';
-var HTMLworkCompanyCol = '<div class="work-company-col col-xs-12 col-sm-4"></div>';
-var HTMLworkDescriptionCol = '<div class="work-description-col col-xs-12 col-sm-8 col-sm-offset-4"></div>';
+var HTMLworkDatesCol = '<div class="work-dates-col col-xs-12 col-md-3"></div>';
+var HTMLworkIconCol = '<div class="work-icon-col col-xs-12 col-md-1"></div>';
+var HTMLworkTitleCol = '<div class="work-title-col col-xs-12 col-md-4"></div>';
+var HTMLworkCompanyCol = '<div class="work-company-col col-xs-12 col-md-4"></div>';
+var HTMLworkDescriptionCol = '<div class="work-description-col col-xs-12 col-md-8 col-md-offset-4"></div>';
 var HTMLworkDates = '<p class="date-text">%data%</p>';
 var HTMLworkIcon = '<a class = "fa fa-briefcase fa-2x entry-icon" href="#"></a>'
 var HTMLworkTitle = '<a class="title-text" href="#">%data%</a>';
@@ -58,11 +58,11 @@ var HTMLworkDescription = '<p><br>%data%</p>';
 // Projects helper variables
 var HTMLprojectHeadingCol = '<div id="project-heading-col" class="col-xs-12"><h2><a href="#">Projects</a></h2></div>';
 var HTMLprojectStart = '<div class="project-entry"></div>';
-var HTMLprojectDateCol = '<div class="project-date-col col-xs-12 col-sm-3"></div>';
-var HTMLprojectIconCol = '<div class="project-icon-col col-xs-12 col-sm-1"></div>';
-var HTMLprojectTitleCol = '<div class="project-title-col col-xs-12 col-sm-8"></div>';
-var HTMLprojectDescriptionCol = '<div class="project-description-col col-xs-12 col-sm-8 col-sm-offset-4"></div>';
-var HTMLprojectPicturesCol = '<div class="project-pictures-col col-xs-12 col-sm-8 col-sm-offset-4"></div>';
+var HTMLprojectDateCol = '<div class="project-date-col col-xs-12 col-md-3"></div>';
+var HTMLprojectIconCol = '<div class="project-icon-col col-xs-12 col-md-1"></div>';
+var HTMLprojectTitleCol = '<div class="project-title-col col-xs-12 col-md-8"></div>';
+var HTMLprojectDescriptionCol = '<div class="project-description-col col-xs-12 col-md-8 col-md-offset-4"></div>';
+var HTMLprojectPicturesCol = '<div class="project-pictures-col col-xs-12 col-md-8 col-md-offset-4"></div>';
 var HTMLprojectDates = '<p class="date-text">%data%</p>';
 var HTMLprojectIcon = '<a class = "fa fa-folder fa-2x entry-icon" href="#"></a>'
 var HTMLprojectTitle = '<a class="project-text" href="#">%data%</a>';
@@ -72,11 +72,11 @@ var HTMLprojectImage = '<img class="project-image" src="%data%">';
 // Education helper variables
 var HTMLschoolsHeadingCol = '<div id="education-heading-col" class="col-xs-12"><h2><a href="#">Education</a></h2></div>';
 var HTMLschoolStart = '<div class="education-entry"></div>';
-var HTMLschoolDatesCol = '<div class="schoolDatesCol col-xs-12 col-sm-3"></div>';
-var HTMLschoolIconCol = '<div class="school-icon-col col-xs-12 col-sm-1"></div>';
-var HTMLschoolNameCol = '<div class="school-name-col col-xs-12 col-sm-4"></div>';
-var HTMLschoolLocationCol = '<div class="school-location-col col-xs-12 col-sm-4"></div>';
-var HTMLschoolDegreeCol = '<div class="school-degree-col col-xs-12  col-sm-8 col-sm-offset-4"></div>';
+var HTMLschoolDatesCol = '<div class="schoolDatesCol col-xs-12 col-md-3"></div>';
+var HTMLschoolIconCol = '<div class="school-icon-col col-xs-12 col-md-1"></div>';
+var HTMLschoolNameCol = '<div class="school-name-col col-xs-12 col-md-4"></div>';
+var HTMLschoolLocationCol = '<div class="school-location-col col-xs-12 col-md-4"></div>';
+var HTMLschoolDegreeCol = '<div class="school-degree-col col-xs-12  col-md-8 col-md-offset-4"></div>';
 var HTMLschoolDates = '<p class="date-text">%data%</p>';
 var HTMLschoolIcon = '<a class = "fa fa-graduation-cap fa-2x entry-icon" href="#"></a>'
 var HTMLschoolName = '<a class="school-text" href="#">%data%</a>';
@@ -89,10 +89,10 @@ var HTMLschoolMajor = '<br><span class="major-text">Major: %data%</span>';
 var HTMLcoursesHeadingCol = '<div id="courses-heading-col" class="col-xs-12 col sm-12"><h2><a href="#">Online Classes</a></h2></div>';
 var HTMLcourseRow = '<div class="row course-row"</div>';
 var HTMLcourseStart = '<div class="course-entry"></div>';
-var HTMLcourseDatesCol = '<div class="course-dates-col col-xs-12 col-sm-3"></div>';
-var HTMLcourseIconCol = '<div class="course-icon-col col-xs-12 col-sm-1"></div>';
-var HTMLcourseTitleCol = '<div class="course-title-col col-xs-12 col-sm-4"></div>';
-var HTMLcourseSchoolCol = '<div class="course-school-col col-xs-12 col-sm-4"></div>';
+var HTMLcourseDatesCol = '<div class="course-dates-col col-xs-12 col-md-3"></div>';
+var HTMLcourseIconCol = '<div class="course-icon-col col-xs-12 col-md-1"></div>';
+var HTMLcourseTitleCol = '<div class="course-title-col col-xs-12 col-md-4"></div>';
+var HTMLcourseSchoolCol = '<div class="course-school-col col-xs-12 col-md-4"></div>';
 var HTMLcourseDates = '<p class="date-text">%data%</p>';
 var HTMLcourseIcon = '<a class = "fa fa-book fa-2x entry-icon" href="#"></a>'
 var HTMLcourseTitle = '<a class="course-text" href="#">%data%</a>';
@@ -111,8 +111,8 @@ var intlButton = '<button>Internationalize</button>';
 var HTMLcontactHeadingCol = '<div id="contact-heading-col" class="col-xs-12"><h2><a href="#">Contact</a></h2></div>';
 var HTMLcontactRow = '<div class="row contact-row"</div>';
 var HTMLcontactStart = '<div class="contact-entry"></div>';
-var HTMLcontactIconCol = '<div class="contact-icon-col col-xs-12 col-sm-1"></div>';
-var HTMLcontactEntryCol = '<div class="contact-entry-col col-xs-12 col-sm-3"></div>';
+var HTMLcontactIconCol = '<div class="contact-icon-col col-xs-12 col-md-1"></div>';
+var HTMLcontactEntryCol = '<div class="contact-entry-col col-xs-12 col-md-3"></div>';
 var HTMLmobileIcon = '<a class = "fa fa-mobile fa-2x entry-icon" href="#"></a>'
 var HTMLemailIcon = '<a class = "fa fa-envelope fa-2x entry-icon" href="#"></a>'
 var HTMLtwitterIcon = '<a class = "fa fa-twitter fa-2x entry-icon" href="#"></a>'
