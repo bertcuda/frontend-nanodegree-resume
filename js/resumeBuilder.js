@@ -10,13 +10,13 @@ var bio = {
     "mobile": "310-463-2649",
     "email": "bertfciccone@gmail.com",
     "github": "https://github.com/bertcuda",
-    "twitter": "@bertctweets",
+    "twitter": "@bertciccone",
     "blog": "http://bertciccone.com",
     "location": "San Francisco"
   },
-  "welcomeMessage": "Leading successful launches of innovative technologies and products.",
+  "welcomeMessage": "Bert is a hands-on product management professional with extensive experience in the development of web, mobile and enterprise products and services. He has a track record of success in the Internet and technology industries with business acumen, entrepreneurial spirit and passion for technology.",
   "skills": [
-    "Product Management", "HTML", "CSS", "Bootstrap", "JavaScript", "jQuery"
+    "Agile Product Owner in Scrum teams", "Managing the product backlog", "Product and system requirements analysis", "Product wireframes and interactive mockups", "Technology product demos and pilot projects", "HTML, CSS, Bootstrap, JavaScript, jQuery"
   ],
   "bioPic": "http://placehold.it/200x200"
 };
@@ -56,12 +56,13 @@ var projects = {
     "description": "Framework for a portfolio of projects demonstrating skilled application of web development technologies.",
     "images": [
       "http://placehold.it/200x200",
+      "http://placehold.it/200x200",
       "http://placehold.it/200x200"
     ]
   }, {
     "title": "Online Resume",
     "dates": "September, 2016",
-    "description": "Interactive resume introducng Bert Ciccone to prospective employers.",
+    "description": "Interactive resume introducing Bert Ciccone to prospective employers.",
     "images": [
       "http://placehold.it/200x200",
       "http://placehold.it/200x200"
@@ -78,14 +79,14 @@ var education = {
     "location": "Los Angeles, California",
     "degree": "MBA",
     "majors": ["Information Systems", "Entrepreneurship"],
-    "dates": "January, 2002 to January, 2004", // intentionally left blank
+    "dates": "", // intentionally left blank
     "url": "http://usc.edu"
   }, {
     "name": "California State University",
     "location": "Northridge, California",
     "degree": "BS",
     "majors": ["Computer Science"],
-    "dates": "January, 1998 to January, 2002", // intentionally left blank
+    "dates": "", // intentionally left blank
     "url": "http://csun.edu"
   }],
   "onlineCourses": [{
@@ -103,7 +104,7 @@ var education = {
 
 console.log(education);
 
-// Setup the Bootstrap container
+// Format the Bootstrap container
 $("#body").toggleClass(HTMLcontainer, true);
 
 // Format the navigation
@@ -125,13 +126,13 @@ bio.displayHeader = function () {
   $("#header").addClass(HTMLrow);
   $("#header").append([HTMLpicCol]);
   $("#header").append([HTMLbioCol]);
+  $("#header").append([HTMLruleCol]);
   // Format the content
   $("#picCol").append([HTMLbioPic.replace("%data%", bio.bioPic)]);
   $("#bioCol").append([HTMLheaderName.replace("%data%", bio.name)]);
   $("#bioCol").append([HTMLheaderRole.replace("%data%", bio.role)]);
   $("#bioCol").append(
     [HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage)]);
-  $("#bioCol").append([HTMLrule]);
 };
 
 bio.displayHeader();
@@ -142,8 +143,8 @@ bio.displaySkills = function () {
     // Format the row columns
     $("#skills").addClass(HTMLrow);
     $("#skills").append([HTMLskillsHeadingCol]);
-    $("#skillsHeadingCol").append([HTMLskillsCol1]);
-    $("#skillsHeadingCol").append([HTMLskillsCol2]);
+    $("#skills-heading-col").append([HTMLskillsCol1]);
+    $("#skills-heading-col").append([HTMLskillsCol2]);
     // Format the content
     bio.skills.forEach(function (skill, iSkill) {
       if (!(iSkill % 2)) {
@@ -172,16 +173,16 @@ work.display = function () {
     $(".work-entry:last").append([HTMLworkCompanyCol]);
     $(".work-entry:last").append([HTMLworkDescriptionCol]);
     // Format the work entry content
-    $(".work-entry:last .workDatesCol").append(
+    $(".work-entry:last .work-dates-col").append(
       [HTMLworkDates.replace("%data%", job.dates)]);
-    $(".work-entry:last .workIconCol").append([HTMLworkIcon]);
-    $(".work-entry:last .workTitleCol").append(
+    $(".work-entry:last .work-icon-col").append([HTMLworkIcon]);
+    $(".work-entry:last .work-title-col").append(
       [HTMLworkTitle.replace("%data%", job.title)]);
-    $(".work-entry:last .workCompanyCol").append(
+    $(".work-entry:last .work-company-col").append(
       [HTMLworkEmployer.replace("%data%", job.employer)]);
-    $(".work-entry:last .workCompanyCol").append(
+    $(".work-entry:last .work-company-col").append(
       [HTMLworkLocation.replace("%data%", job.location)]);
-    $(".work-entry:last .workDescriptionCol").append(
+    $(".work-entry:last .work-description-col").append(
       [HTMLworkDescription.replace("%data%", job.description)]);
   });
 };
@@ -202,15 +203,15 @@ projects.display = function () {
     $(".project-entry:last").append([HTMLprojectDescriptionCol]);
     $(".project-entry:last").append([HTMLprojectPicturesCol]);
     // Format the content
-    $(".project-entry:last .projectDateCol").append(
+    $(".project-entry:last .project-date-col").append(
       [HTMLprojectDates.replace("%data%", project.dates)]);
-    $(".project-entry:last .projectIconCol").append([HTMLprojectIcon]);
-    $(".project-entry:last .projectTitleCol").append(
+    $(".project-entry:last .project-icon-col").append([HTMLprojectIcon]);
+    $(".project-entry:last .project-title-col").append(
       [HTMLprojectTitle.replace("%data%", project.title)]);
-    $(".project-entry:last .projectDescriptionCol").append(
+    $(".project-entry:last .project-description-col").append(
       [HTMLprojectDescription.replace("%data%", project.description)]);
     project.images.forEach(function (image) {
-      $(".project-entry:last .projectPicturesCol").append(
+      $(".project-entry:last .project-pictures-col").append(
         [HTMLprojectImage.replace("%data%", image)]);
     });
   });
@@ -236,17 +237,17 @@ education.display = function () {
     // Format the content
     $(".education-entry:last .schoolDatesCol").append(
       [HTMLschoolDates.replace("%data%", school.dates)]);
-    $(".education-entry:last .schoolIconCol").append([HTMLschoolIcon]);
-    $(".education-entry:last .schoolNameCol").append(
+    $(".education-entry:last .school-icon-col").append([HTMLschoolIcon]);
+    $(".education-entry:last .school-name-col").append(
       [HTMLschoolName.replace("%data%", school.name)]);
-    $(".education-entry:last .schoolLocationCol").append(
+    $(".education-entry:last .school-location-col").append(
       [HTMLschoolLocation.replace("%data%", school.location)]);
-    $(".education-entry:last .schoolLocationCol").append(
+    $(".education-entry:last .school-location-col").append(
       [HTMLschoolURL.replace("%data%", school.url)]);
-    $(".education-entry:last .schoolDegreeCol").append(
+    $(".education-entry:last .school-degree-col").append(
       [HTMLschoolDegree.replace("%data%", school.degree)]);
     school.majors.forEach(function (major) {
-      $(".education-entry:last .schoolDegreeCol").append(
+      $(".education-entry:last .school-degree-col").append(
         [HTMLschoolMajor.replace("%data%", major)]);
     });
   });
@@ -257,98 +258,97 @@ education.display = function () {
   education.onlineCourses.forEach(
     function (course) {
       // Format the course entry columns
-      $("#education").append([HTMLcourseStart]);
+      $("#courses-heading-col").append([HTMLcourseRow]);
+      $(".course-row:last").append([HTMLcourseStart]);
       $(".course-entry:last").append([HTMLcourseDatesCol]);
       $(".course-entry:last").append([HTMLcourseIconCol]);
       $(".course-entry:last").append([HTMLcourseTitleCol]);
       $(".course-entry:last").append([HTMLcourseSchoolCol]);
       // Format the content
-      $(".course-entry:last .courseDatesCol").append(
+      $(".course-entry:last .course-dates-col").append(
         [HTMLcourseDates.replace("%data%", course.dates)]);
-      $(".course-entry:last .courseIconCol").append([HTMLcourseIcon]);
-      $(".course-entry:last .courseTitleCol").append(
+      $(".course-entry:last .course-icon-col").append([HTMLcourseIcon]);
+      $(".course-entry:last .course-title-col").append(
         [HTMLcourseTitle.replace("%data%", course.title)]);
-      $(".course-entry:last .courseSchoolCol").append(
-        [HTMLcourseSchool.replace("%data%", course.school)]);
-      $(".course-entry:last .courseSchoolCol").append(
+      $(".course-entry:last .course-school-col").append(
         [HTMLcourseURL.replace("%data%", course.url)]);
+      $(".course-entry:last .course-school-col").append(
+        [HTMLcourseSchool.replace("%data%", course.school)]);
     });
 };
 
 education.display();
 
 // Format the map
-$("#theMap").addClass(HTMLrow);
-$("#theMap").append([HTMLmapCol]);
-$("#mapDiv").append([HTMLmapHeading]);
-$("#mapDiv").append(googleMap);
+var displayMap = function () {
+  $("#theMap").addClass(HTMLrow);
+  $("#theMap").append([HTMLmapCol]);
+  $("#mapDiv").append([HTMLmapHeading]);
+  $("#mapDiv").append(googleMap);
+}
 
-// Format the contacts
+displayMap();
+
+// Format the footer and contacts
 bio.displayContacts = function () {
-  // Format the row and columns
-  $("#contacts").addClass(HTMLrow);
-  $("#contacts").append([HTMLcontactHeadingCol]);
 
-  // Format the contact row, column and content
-  $("#contactHeadingCol").append([HTMLcontactRow]);
-  $(".contact-row:last").append([HTMLcontactStart]);
-  // $(".contact-entry:last").append([HTMLcontactBlankCol]);
-  $(".contact-entry:last").append([HTMLcontactIconCol]);
-  $(".contact-entry:last").append([HTMLcontactEntryCol]);
+  formatFooterCols = function () {
+    // Format the contact row, column and content
+    $("#connect-heading-col").append([HTMLcontactRow]);
+    $(".contact-row:last").append([HTMLcontactStart]);
+    $(".contact-entry:last").append([HTMLcontactIconCol]);
+    $(".contact-entry:last").append([HTMLcontactEntryCol]);
+  }
 
-  $(".contact-entry:last .contact-icon-col").addClass("col-sm-offset-3");
+  formatContactCols = function () {
+    $(".contact-row:last").append([HTMLcontactStart]);
+    $(".contact-entry:last").append([HTMLcontactIconCol]);
+    $(".contact-entry:last").append([HTMLcontactEntryCol]);
+  }
+
+  // Format the Footer
+  $("#lets-connect").addClass(HTMLrow);
+  $("#lets-connect").append([HTMLconnectHeadingCol]);
+
+  formatFooterCols();
+
+  $(".contact-entry:last .contact-icon-col").addClass(HTMLiconOffset);
   $(".contact-entry:last .contact-icon-col").append([HTMLmobileIcon]);
   $(".contact-entry:last .contact-entry-col").append([HTMLcontact.replace("%data%", bio.contacts.mobile)]);
 
-  $(".contact-row:last").append([HTMLcontactStart]);
-  $(".contact-entry:last").append([HTMLcontactIconCol]);
-  $(".contact-entry:last").append([HTMLcontactEntryCol]);
+  formatContactCols();
 
   $(".contact-entry:last .contact-icon-col").append([HTMLemailIcon]);
   $(".contact-entry:last .contact-entry-col").append([HTMLcontact.replace("%data%", bio.contacts.email)]);
 
-  // Format the contact row, column and content
-  $("#contactHeadingCol").append([HTMLcontactRow]);
-  $(".contact-row:last").append([HTMLcontactStart]);
-  $(".contact-entry:last").append([HTMLcontactIconCol]);
-  $(".contact-entry:last").append([HTMLcontactEntryCol]);
+  formatFooterCols();
 
-  $(".contact-entry:last .contact-icon-col").addClass("col-sm-offset-3");
+  $(".contact-entry:last .contact-icon-col").addClass(HTMLiconOffset);
   $(".contact-entry:last .contact-icon-col").append([HTMLtwitterIcon]);
   $(".contact-entry:last .contact-entry-col").append([HTMLcontact.replace("%data%", bio.contacts.twitter)]);
 
-  $(".contact-row:last").append([HTMLcontactStart]);
-  $(".contact-entry:last").append([HTMLcontactIconCol]);
-  $(".contact-entry:last").append([HTMLcontactEntryCol]);
+  formatContactCols();
 
   $(".contact-entry:last .contact-icon-col").append([HTMLgithubIcon]);
   $(".contact-entry:last .contact-entry-col").append([HTMLcontact.replace("%data%", bio.contacts.github)]);
 
-  // Format the contact row, column and content
-  $("#contactHeadingCol").append([HTMLcontactRow]);
-  $(".contact-row:last").append([HTMLcontactStart]);
-  $(".contact-entry:last").append([HTMLcontactIconCol]);
-  $(".contact-entry:last").append([HTMLcontactEntryCol]);
+  formatFooterCols();
 
-  $(".contact-entry:last .contact-icon-col").addClass("col-sm-offset-3");
+  $(".contact-entry:last .contact-icon-col").addClass(HTMLiconOffset);
   $(".contact-entry:last .contact-icon-col").append([HTMLblogIcon]);
   $(".contact-entry:last .contact-entry-col").append([HTMLcontact.replace("%data%", bio.contacts.blog)]);
 
-  $(".contact-row:last").append([HTMLcontactStart]);
-  $(".contact-entry:last").append([HTMLcontactIconCol]);
-  $(".contact-entry:last").append([HTMLcontactEntryCol]);
+  formatContactCols();
 
   $(".contact-entry:last .contact-icon-col").append([HTMLlocationIcon]);
   $(".contact-entry:last .contact-entry-col").append([HTMLcontact.replace("%data%", bio.contacts.location)]);
+  $("#lets-connect").append([HTMLintlCol]);
+  $("#intlCol").append([intlButton]);
 };
 
 bio.displayContacts();
 
-// Format the internationalization of the name
-$("#lets-connect").addClass(HTMLrow);
-$("#lets-connect").append([HTMLintlCol]);
-$("#intlCol").append([intlButton]);
-
+// Format the internationalized name
 function inName(myName) {
   myName = myName.trim().split(" ");
   bio.name =
