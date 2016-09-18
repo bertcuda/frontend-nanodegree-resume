@@ -69,6 +69,10 @@ a:active {
   text-decoration: none !important;
 }
 
+hr {
+  border-color: rgba(57, 94, 102, 1) !important;
+}
+
 ul {
   list-style-type: none;
 }
@@ -125,6 +129,13 @@ ul {
 
 /* Header Styles */
 
+.biopic {
+  margin-top: 2em;
+  display: none;
+  width: 200px;
+  height: 200px;
+}
+
 #name {
   font-size: 40px;
   color: rgba(57, 94, 102, 1);
@@ -139,19 +150,14 @@ ul {
   line-height: 1.2em;
 }
 
-.biopic {
-  margin-top: 2em;
-  display: none;
-}
-
 
 /* Main Content Styles */
 
-.work-description-col, .project-description-col, .school-degree-col, .course-school-col, .contact-entry-col {
-  margin-bottom: 2em;
+.work-description-col, .project-description-col, .school-degree-col, .course-school-col {
+  margin-bottom: 1.5em;
 }
 
-.title-text, .employer-text, .project-text, .course-text, .school-text {
+.skills-text, .title-text, .employer-text, .project-text, .course-text, .school-text {
   font-size: 1.2em;
   color: rgba(57, 94, 102, 1) !important;
   line-height: 1.3em;
@@ -174,7 +180,9 @@ ul {
 }
 
 .project-image {
-  margin: 0 1em 3em;
+  margin: 0 0.5em 1em;
+  height: 100px;
+  width: 100px;
 }
 
 .major-text {
@@ -202,6 +210,21 @@ ul {
 #mapDiv {
   width: 100%;
   padding-bottom: 5%;
+}
+
+
+/* Footer Styles */
+
+.contact-entry-col {
+  margin-bottom: 0.75em;
+}
+
+.contact-icon-col {
+  text-align: center;
+}
+
+button {
+  border: none;
 }
 
 

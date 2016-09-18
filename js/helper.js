@@ -20,15 +20,15 @@ var HTMLiconOffset = 'col-md-offset-3';
 // Navigation helper variables
 var HTMLtabs = '<div id="tabs"></div>';
 var HTMLtabList = '<ul class="tabList"></ul>';
-var HTMLnavProfile = '<li><div class="navCol col-xs-3"><a href="#bioCol" class="navItem fa fa-user fa-2x bg-user" aria-hidden="true"></a></div></li>';
+var HTMLnavProfile = '<li><div class="navCol col-xs-3"><a href="#bio-col" class="navItem fa fa-user fa-2x bg-user" aria-hidden="true"></a></div></li>';
 var HTMLnavWork = '<li><div class="navCol col-xs-3"><a href="#work-heading-col" class="navItem fa fa-briefcase fa-2x bg-briefcase" aria-hidden="true"></a></div></li>';
 var HTMLnavEducation = '<li><div class="navCol col-xs-3"><a href="#education-heading-col" class="navItem fa fa-graduation-cap fa-2x bg-graduation-cap" aria-hidden="true"></a></div></li>';
 var HTMLnavContact = '<li><div class="navCol col-xs-3"><a href="#connect-heading-col" class="navItem fa fa-envelope fa-2x bg-envelope" aria-hidden="true"></a></div></li>';
 
 // Header helper variables
-var HTMLpicCol = '<div id="picCol" class="col-xs-12 col-md-4"></div>';
-var HTMLbioCol = '<div id="bioCol" class="col-xs-12 col-md-8"></div>';
-var HTMLruleCol = '<div id="ruleCol" class="col-xs-12 col-md-12"><hr></div>';
+var HTMLpicCol = '<div id="bio-pic-col" class="col-xs-12 col-md-4"></div>';
+var HTMLbioCol = '<div id="bio-col" class="col-xs-12 col-md-8"></div>';
+var HTMLruleCol = '<div id="rule-col" class="col-xs-12"><hr></div>';
 var HTMLbioPic = '<a href="#"><img src="%data%" class="biopic img-responsive center-block"></a>';
 var HTMLheaderName = '<h1 id="name"><a href="#">%data%</a></h1>';
 var HTMLheaderRole = '<h3 class="role-entry">%data%</h3>';
@@ -36,9 +36,9 @@ var HTMLwelcomeMsg = '<p class="welcome-message">%data%</p>';
 
 // Skills helper variables
 var HTMLskillsHeadingCol = '<div id="skills-heading-col" class="col-xs-12"><h2><a href="#">Skills at a Glance</a></h2></div>';
-var HTMLskillsCol1 = '<div id="skillsCol1" class="col-xs-12 col-md-4 col-md-offset-4"></div>';
-var HTMLskillsCol2 = '<div id="skillsCol2" class="col-xs-12 col-md-4"></div>';
-var HTMLskill = '<p class="skills-entry">%data%</p>';
+var HTMLskillsCol1 = '<div id="skills-col1" class="col-xs-12 col-md-4 col-md-offset-4"></div>';
+var HTMLskillsCol2 = '<div id="skills-col2" class="col-xs-12 col-md-4"></div>';
+var HTMLskill = '<p class="skills-entry skills-text">%data%</p>';
 
 // Work helper variables
 var HTMLworkHeadingCol = '<div id="work-heading-col" class="col-xs-12"><h2><a href="#">Work Experience</a></h2></div>';
@@ -61,8 +61,8 @@ var HTMLprojectStart = '<div class="project-entry"></div>';
 var HTMLprojectDateCol = '<div class="project-date-col col-xs-12 col-md-3"></div>';
 var HTMLprojectIconCol = '<div class="project-icon-col col-xs-12 col-md-1"></div>';
 var HTMLprojectTitleCol = '<div class="project-title-col col-xs-12 col-md-8"></div>';
-var HTMLprojectDescriptionCol = '<div class="project-description-col col-xs-12 col-md-8 col-md-offset-4"></div>';
-var HTMLprojectPicturesCol = '<div class="project-pictures-col col-xs-12 col-md-8 col-md-offset-4"></div>';
+var HTMLprojectDescriptionCol = '<div class="project-description-col col-xs-12 col-md-3"></div>';
+var HTMLprojectPicturesCol = '<div class="project-pictures-col col-xs-12 col-md-5"></div>';
 var HTMLprojectDates = '<p class="date-text">%data%</p>';
 var HTMLprojectIcon = '<a class = "fa fa-folder fa-2x entry-icon" href="#"></a>'
 var HTMLprojectTitle = '<a class="project-text" href="#">%data%</a>';
@@ -104,11 +104,8 @@ var HTMLmapCol = '<div id="mapDiv" class="col-xs-12"></div>';
 var HTMLmapHeading = '<h2><a href="#">Places Where I\'ve Lived and Worked</a></h2>';
 var googleMap = '<div id="map"></div>';
 
-var HTMLintlCol = '<div id="intlCol" class="col-xs-12"></div>';
-var intlButton = '<button>Internationalize</button>';
-
-// Contact helper variables
-var HTMLcontactHeadingCol = '<div id="contact-heading-col" class="col-xs-12"><h2><a href="#">Contact</a></h2></div>';
+// Footer helper variables
+var HTMLconnectHeadingCol = '<div id="connect-heading-col" class="col-xs-12"><h2><a href="#">Let\'s Connect</a></h2></div>';
 var HTMLcontactRow = '<div class="row contact-row"</div>';
 var HTMLcontactStart = '<div class="contact-entry"></div>';
 var HTMLcontactIconCol = '<div class="contact-icon-col col-xs-12 col-md-1"></div>';
@@ -120,9 +117,8 @@ var HTMLgithubIcon = '<a class = "fa fa-github fa-2x entry-icon" href="#"></a>'
 var HTMLblogIcon = '<a class = "fa fa-external-link-square fa-2x entry-icon" href="#"></a>'
 var HTMLlocationIcon = '<a class = "fa fa-map-marker fa-2x entry-icon" href="#"></a>'
 var HTMLcontact = '<p>%data%</p>';
-
-// Footer helper variables
-var HTMLconnectHeadingCol = '<div id="connect-heading-col" class="col-xs-12"><h2><a href="#">Let\'s Connect</a></h2></div>';
+var HTMLintlCol = '<div id="intlCol" class="col-xs-12"></div>';
+var intlButton = '<button class = "fa fa-globe fa-2x entry-icon"></button>';
 
 /*
 The Internationalize Names challenge found in the lesson Flow Control from JavaScript Basics requires you to create a function that will need this helper code to run. Don't delete! It hooks up your code to the button you'll be appending.

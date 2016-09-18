@@ -18,7 +18,7 @@ var bio = {
   "skills": [
     "Agile Product Owner in Scrum teams", "Managing the product backlog", "Product and system requirements analysis", "Product wireframes and interactive mockups", "Technology product demos and pilot projects", "HTML, CSS, Bootstrap, JavaScript, jQuery"
   ],
-  "bioPic": "http://placehold.it/200x200"
+  "bioPic": "http://placehold.it/400x400"
 };
 
 console.log(bio);
@@ -55,17 +55,17 @@ var projects = {
     "dates": "August, 2016",
     "description": "Framework for a portfolio of projects demonstrating skilled application of web development technologies.",
     "images": [
-      "http://placehold.it/200x200",
-      "http://placehold.it/200x200",
-      "http://placehold.it/200x200"
+      "http://placehold.it/400x400",
+      "http://placehold.it/400x400"
     ]
   }, {
     "title": "Online Resume",
     "dates": "September, 2016",
     "description": "Interactive resume introducing Bert Ciccone to prospective employers.",
     "images": [
-      "http://placehold.it/200x200",
-      "http://placehold.it/200x200"
+      "http://placehold.it/400x400",
+      "http://placehold.it/400x400",
+      "http://placehold.it/400x400"
     ]
   }]
 };
@@ -128,10 +128,10 @@ bio.displayHeader = function () {
   $("#header").append([HTMLbioCol]);
   $("#header").append([HTMLruleCol]);
   // Format the content
-  $("#picCol").append([HTMLbioPic.replace("%data%", bio.bioPic)]);
-  $("#bioCol").append([HTMLheaderName.replace("%data%", bio.name)]);
-  $("#bioCol").append([HTMLheaderRole.replace("%data%", bio.role)]);
-  $("#bioCol").append(
+  $("#bio-pic-col").append([HTMLbioPic.replace("%data%", bio.bioPic)]);
+  $("#bio-col").append([HTMLheaderName.replace("%data%", bio.name)]);
+  $("#bio-col").append([HTMLheaderRole.replace("%data%", bio.role)]);
+  $("#bio-col").append(
     [HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage)]);
 };
 
@@ -143,14 +143,15 @@ bio.displaySkills = function () {
     // Format the row columns
     $("#skills").addClass(HTMLrow);
     $("#skills").append([HTMLskillsHeadingCol]);
+    $("#skills").append([HTMLruleCol]);
     $("#skills-heading-col").append([HTMLskillsCol1]);
     $("#skills-heading-col").append([HTMLskillsCol2]);
     // Format the content
     bio.skills.forEach(function (skill, iSkill) {
       if (!(iSkill % 2)) {
-        $("#skillsCol1").append([HTMLskill.replace("%data%", skill)]);
+        $("#skills-col1").append([HTMLskill.replace("%data%", skill)]);
       } else {
-        $("#skillsCol2").append([HTMLskill.replace("%data%", skill)]);
+        $("#skills-col2").append([HTMLskill.replace("%data%", skill)]);
       }
     });
   }
@@ -185,6 +186,7 @@ work.display = function () {
     $(".work-entry:last .work-description-col").append(
       [HTMLworkDescription.replace("%data%", job.description)]);
   });
+  $("#workExperience").append([HTMLruleCol]);
 };
 
 work.display();
@@ -215,6 +217,7 @@ projects.display = function () {
         [HTMLprojectImage.replace("%data%", image)]);
     });
   });
+  $("#projects").append([HTMLruleCol]);
 };
 
 projects.display();
@@ -275,6 +278,7 @@ education.display = function () {
       $(".course-entry:last .course-school-col").append(
         [HTMLcourseSchool.replace("%data%", course.school)]);
     });
+  $("#education").append([HTMLruleCol]);
 };
 
 education.display();
@@ -285,12 +289,13 @@ var displayMap = function () {
   $("#theMap").append([HTMLmapCol]);
   $("#mapDiv").append([HTMLmapHeading]);
   $("#mapDiv").append(googleMap);
+  $("#theMap").append([HTMLruleCol]);
 }
 
 displayMap();
 
 // Format the footer and contacts
-bio.displayContacts = function () {
+bio.displayFooter = function () {
 
   formatFooterCols = function () {
     // Format the contact row, column and content
@@ -309,6 +314,7 @@ bio.displayContacts = function () {
   // Format the Footer
   $("#lets-connect").addClass(HTMLrow);
   $("#lets-connect").append([HTMLconnectHeadingCol]);
+  $("#lets-connect").append([HTMLruleCol]);
 
   formatFooterCols();
 
@@ -346,7 +352,7 @@ bio.displayContacts = function () {
   $("#intlCol").append([intlButton]);
 };
 
-bio.displayContacts();
+bio.displayFooter();
 
 // Format the internationalized name
 function inName(myName) {
