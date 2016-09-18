@@ -18,7 +18,7 @@ var bio = {
   "skills": [
     "Agile Product Owner in Scrum teams", "Managing the product backlog", "Product and system requirements analysis", "Product wireframes and interactive mockups", "Technology product demos and pilot projects", "HTML, CSS, Bootstrap, JavaScript, jQuery"
   ],
-  "bioPic": "http://placehold.it/400x400"
+  "bioPic": "images/fry.jpg"
 };
 
 console.log(bio);
@@ -55,17 +55,17 @@ var projects = {
     "dates": "August, 2016",
     "description": "Framework for a portfolio of projects demonstrating skilled application of web development technologies.",
     "images": [
-      "http://placehold.it/400x400",
-      "http://placehold.it/400x400"
+      "images/project1-1.png",
+      "images/project1-2.png",
+      "images/project1-3.png"
     ]
   }, {
     "title": "Online Resume",
     "dates": "September, 2016",
     "description": "Interactive resume introducing Bert Ciccone to prospective employers.",
     "images": [
-      "http://placehold.it/400x400",
-      "http://placehold.it/400x400",
-      "http://placehold.it/400x400"
+      "images/project2-1.png",
+      "images/project2-2.png"
     ]
   }]
 };
