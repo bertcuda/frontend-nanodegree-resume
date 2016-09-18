@@ -19,11 +19,11 @@ var HTMLiconOffset = 'col-md-offset-3';
 
 // Navigation helper variables
 var HTMLtabs = '<div id="tabs"></div>';
-var HTMLtabList = '<ul class="tabList"></ul>';
-var HTMLnavProfile = '<li><div class="navCol col-xs-3"><a href="#bio-col" class="navItem fa fa-user fa-2x bg-user" aria-hidden="true"></a></div></li>';
-var HTMLnavWork = '<li><div class="navCol col-xs-3"><a href="#work-heading-col" class="navItem fa fa-briefcase fa-2x bg-briefcase" aria-hidden="true"></a></div></li>';
-var HTMLnavEducation = '<li><div class="navCol col-xs-3"><a href="#education-heading-col" class="navItem fa fa-graduation-cap fa-2x bg-graduation-cap" aria-hidden="true"></a></div></li>';
-var HTMLnavContact = '<li><div class="navCol col-xs-3"><a href="#connect-heading-col" class="navItem fa fa-envelope fa-2x bg-envelope" aria-hidden="true"></a></div></li>';
+var HTMLtabList = '<ul class="tab-list"></ul>';
+var HTMLnavProfile = '<li><div class="nav-col col-xs-3"><a href="#bio-col" class="nav-item fa fa-user fa-2x bg-user" aria-hidden="true"></a></div></li>';
+var HTMLnavWork = '<li><div class="nav-col col-xs-3"><a href="#work-heading-col" class="nav-item fa fa-briefcase fa-2x bg-briefcase" aria-hidden="true"></a></div></li>';
+var HTMLnavEducation = '<li><div class="nav-col col-xs-3"><a href="#education-heading-col" class="nav-item fa fa-graduation-cap fa-2x bg-graduation-cap" aria-hidden="true"></a></div></li>';
+var HTMLnavContact = '<li><div class="nav-col col-xs-3"><a href="#connect-heading-col" class="nav-item fa fa-envelope fa-2x bg-envelope" aria-hidden="true"></a></div></li>';
 
 // Header helper variables
 var HTMLpicCol = '<div id="bio-pic-col" class="col-xs-12 col-md-4"></div>';

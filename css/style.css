@@ -80,17 +80,17 @@ ul {
 
 /* Navigation styles */
 
-.navCol {
+.nav-col {
   padding-left: 0 !important;
   padding-right: 0 !important;
 }
 
-.tabList {
+.tab-list {
   list-style: none;
   padding-left: 0;
 }
 
-.navItem {
+.nav-item {
   display: block;
   text-align: center;
   padding-top: 1em;
@@ -98,11 +98,11 @@ ul {
   width: 100%;
 }
 
-.navItem:link, .navItem:visited {
+.nav-item:link, .nav-item:visited {
   color: white !important;
 }
 
-.navItem:hover, .navItem:active {
+.nav-item:hover, .nav-item:active {
   color: rgba(218, 247, 220, 1) !important;
 }
 

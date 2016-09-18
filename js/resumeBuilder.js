@@ -112,10 +112,10 @@ nav.display = function () {
   $("#nav").addClass(HTMLrow);
   $("#nav").append([HTMLtabs]);
   $("#tabs").append([HTMLtabList]);
-  $(".tabList:last").append([HTMLnavProfile]);
-  $(".tabList:last").append([HTMLnavWork]);
-  $(".tabList:last").append([HTMLnavEducation]);
-  $(".tabList:last").append([HTMLnavContact]);
+  $(".tab-list:last").append([HTMLnavProfile]);
+  $(".tab-list:last").append([HTMLnavWork]);
+  $(".tab-list:last").append([HTMLnavEducation]);
+  $(".tab-list:last").append([HTMLnavContact]);
 };
 
 nav.display();
