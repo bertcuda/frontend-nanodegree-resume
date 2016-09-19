@@ -15,220 +15,220 @@
 */
 
 body {
-  font-family: "Roboto", sans-serif;
-  background-color: rgba(218, 247, 220, 1) !important;
+    font-family: "Roboto", sans-serif;
+    background-color: rgba(218, 247, 220, 1) !important;
 }
 
 h1 {
-  font-size: 4em;
-  margin-top: 2em;
+    font-size: 4em;
+    margin-top: 2em;
 }
 
 h2 {
-  font-weight: bold;
-  font-size: 3em;
-  color: rgba(57, 94, 102, 1);
-  line-height: 29px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+    font-weight: bold;
+    font-size: 3em;
+    color: rgba(57, 94, 102, 1);
+    line-height: 29px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 h2 a:link {
-  display: block !important;
+    display: block !important;
 }
 
 h3 {
-  font-size: 2em;
-  color: rgba(57, 94, 102, 1) !important;
-  line-height: 22px;
+    font-size: 2em;
+    color: rgba(57, 94, 102, 1) !important;
+    line-height: 22px;
 }
 
 p {
-  font-size: 1em;
-  color: rgba(57, 94, 102, 1);
-  line-height: 1.2em;
+    font-size: 1em;
+    color: rgba(57, 94, 102, 1);
+    line-height: 1.2em;
 }
 
 a:link {
-  color: rgba(57, 94, 102, 1) !important;
-  text-decoration: none !important;
+    color: rgba(57, 94, 102, 1) !important;
+    text-decoration: none !important;
 }
 
 a:visited {
-  color: rgba(57, 94, 102, 1) !important;
-  text-decoration: none !important;
+    color: rgba(57, 94, 102, 1) !important;
+    text-decoration: none !important;
 }
 
 a:hover {
-  color: rgba(15, 155, 90, 1) !important;
-  text-decoration: none !important;
+    color: rgba(15, 155, 90, 1) !important;
+    text-decoration: none !important;
 }
 
 a:active {
-  color: rgba(15, 155, 90, 1) !important;
-  text-decoration: none !important;
+    color: rgba(15, 155, 90, 1) !important;
+    text-decoration: none !important;
 }
 
 hr {
-  border-width: 2px !important;
-  border-color: rgba(15, 155, 90, 1) !important;
+    border-width: 2px !important;
+    border-color: rgba(15, 155, 90, 1) !important;
 }
 
 ul {
-  list-style-type: none;
+    list-style-type: none;
 }
 
 
 /* Navigation styles */
 
 .nav-col {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 }
 
 .tab-list {
-  list-style: none;
-  padding-left: 0;
+    list-style: none;
+    padding-left: 0;
 }
 
 .nav-item {
-  display: block;
-  text-align: center;
-  padding-top: 1em;
-  padding-bottom: 1em;
-  width: 100%;
+    display: block;
+    text-align: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    width: 100%;
 }
 
 .nav-item:link, .nav-item:visited {
-  color: white !important;
+    color: white !important;
 }
 
 .nav-item:hover, .nav-item:active {
-  color: rgba(218, 247, 220, 1) !important;
+    color: rgba(218, 247, 220, 1) !important;
 }
 
 .bg-user {
-  background-color: rgba(57, 94, 102, 1);
+    background-color: rgba(57, 94, 102, 1);
 }
 
 .bg-briefcase {
-  background-color: rgba(56, 125, 122, 1);
+    background-color: rgba(56, 125, 122, 1);
 }
 
 .bg-graduation-cap {
-  background-color: rgba(50, 147, 111, 1);
+    background-color: rgba(50, 147, 111, 1);
 }
 
 .bg-envelope {
-  background-color: rgba(38, 169, 108, 1);
+    background-color: rgba(38, 169, 108, 1);
 }
 
 .entry-icon {
-  width: 45px;
+    width: 45px;
 }
 
 
 /* Header Styles */
 
 .biopic {
-  margin-top: 2em;
-  display: none;
-  width: 200px;
-  height: 200px;
-  border: 1px solid rgba(15, 155, 90, 1);
+    margin-top: 2em;
+    display: none;
+    width: 200px;
+    height: 200px;
+    border: 1px solid rgba(15, 155, 90, 1);
 }
 
 #name {
-  font-size: 40px;
-  color: rgba(57, 94, 102, 1);
-  line-height: 48px;
-  display: block;
+    font-size: 40px;
+    color: rgba(57, 94, 102, 1);
+    line-height: 48px;
+    display: block;
 }
 
 .welcome-message {
-  font-style: italic;
-  font-size: 18px;
-  color: rgba(57, 94, 102, 1);
-  line-height: 1.2em;
+    font-style: italic;
+    font-size: 18px;
+    color: rgba(57, 94, 102, 1);
+    line-height: 1.2em;
 }
 
 
 /* Main Content Styles */
 
 .work-description-col, .project-description-col, .school-degree-col, .course-school-col {
-  margin-bottom: 1.5em;
+    margin-bottom: 1.5em;
 }
 
 .skills-text, .title-text, .employer-text, .project-text, .course-text, .school-text {
-  font-size: 1.2em;
-  color: rgba(57, 94, 102, 1) !important;
-  line-height: 1.3em;
+    font-size: 1.2em;
+    color: rgba(57, 94, 102, 1) !important;
+    line-height: 1.3em;
 }
 
 .date-text {
-  text-align: center;
-  font-style: italic;
-  font-size: 14px;
-  line-height: 16px;
+    text-align: center;
+    font-style: italic;
+    font-size: 14px;
+    line-height: 16px;
 }
 
 .entry-icon {
-  color: rgba(57, 94, 102, 1);
-  background-color: rgba(218, 247, 220, 1);
+    color: rgba(57, 94, 102, 1);
+    background-color: rgba(218, 247, 220, 1);
 }
 
 .project-pictures-col {
-  text-align: center;
+    text-align: center;
 }
 
 .project-image {
-  margin: 0 0.5em 2em;
-  height: 100px;
-  width: 100px;
-  border: 1px solid rgba(15, 155, 90, 1);
+    margin: 0 0.5em 2em;
+    height: 100px;
+    width: 100px;
+    border: 1px solid rgba(15, 155, 90, 1);
 }
 
 .major-text {
-  font-size: 1em;
-  font-style: italic;
-  color: rgba(57, 94, 102, 1) !important;
-  line-height: 1.2em;
+    font-size: 1em;
+    font-style: italic;
+    color: rgba(57, 94, 102, 1) !important;
+    line-height: 1.2em;
 }
 
 .location-text {
-  font-style: italic;
-  font-size: 1em;
-  color: rgba(57, 94, 102, 1) !important;
-  line-height: 1.3em;
+    font-style: italic;
+    font-size: 1em;
+    color: rgba(57, 94, 102, 1) !important;
+    line-height: 1.3em;
 }
 
 
 /* Map Styles */
 
 #map {
-  display: block;
-  margin: 0 5%;
-  border: 1px solid rgba(15, 155, 90, 1);
+    display: block;
+    margin: 0 5%;
+    border: 1px solid rgba(15, 155, 90, 1);
 }
 
 #mapDiv {
-  width: 100%;
-  padding-bottom: 5%;
+    width: 100%;
+    padding-bottom: 5%;
 }
 
 
 /* Footer Styles */
 
 .contact-entry-col {
-  margin-bottom: 0.75em;
+    margin-bottom: 0.75em;
 }
 
 .contact-icon-col {
-  text-align: center;
+    text-align: center;
 }
 
 button {
-  border: none;
+    border: none;
 }
 
 
@@ -238,37 +238,44 @@ button {
 /* Styles for bootstrap xs and sm */
 
 @media only screen and (max-width: 991px) {
-  h1, h2, h3, h4 {
-    text-align: center;
-  }
-  .role-entry, .welcome-message {
-    text-align: center;
-  }
-  .skills-entry, .work-entry, .project-entry, .education-entry, .course-entry, .contact-entry {
-    text-align: center;
-  }
-  .employer-text, .location-text {
-    display: block;
-  }
-  #mapDiv {
-    height: 300px;
-  }
-  #map {
-    height: 62%;
-  }
+    h1, h2, h3, h4 {
+        text-align: center;
+    }
+
+    .role-entry, .welcome-message {
+        text-align: center;
+    }
+
+    .skills-entry, .work-entry, .project-entry, .education-entry, .course-entry, .contact-entry {
+        text-align: center;
+    }
+
+    .employer-text, .location-text {
+        display: block;
+    }
+
+    #mapDiv {
+        height: 300px;
+    }
+
+    #map {
+        height: 62%;
+    };
 }
 
 
 /* Styles for bootstrap md and lg */
 
 @media only screen and (min-width: 992px) {
-  .location-text {
-    float: right;
-  }
-  #mapDiv {
-    height: 350px;
-  }
-  #map {
-    height: 82%;
-  }
+    .location-text {
+        float: right;
+    }
+
+    #mapDiv {
+        height: 350px;
+    }
+
+    #map {
+        height: 82%;
+    };
 }
