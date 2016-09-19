@@ -104,7 +104,11 @@ var education = {
 console.log(education);
 
 // Format the Bootstrap container
-$("#body").toggleClass(HTMLcontainer, true);
+formatContainer = function() {
+  $("#body").toggleClass(HTMLcontainer, true);
+};
+
+formatContainer();
 
 // Format the navigation
 nav.display = function() {
