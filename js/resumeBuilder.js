@@ -17,7 +17,7 @@ var bio = {
     "skills": [
         "Agile Product Owner in Scrum teams", "Managing the product backlog", "Product and system requirements analysis", "Product wireframes and interactive mockups", "Technology product demos and pilot projects", "Front End Web Developer: HTML, CSS, Bootstrap, JavaScript, jQuery"
     ],
-    "bioPic": "images/fry.jpg"
+    "biopic": "images/fry.jpg"
 };
 
 console.log(bio);
@@ -111,7 +111,7 @@ formatContainer = function() {
 formatContainer();
 
 // Format the navigation
-nav.display = function() {
+navDisplay = function() {
     $("#nav").addClass(HTMLrow);
     $("#nav").append([HTMLtabs]);
     $("#tabs").append([HTMLtabList]);
@@ -121,46 +121,113 @@ nav.display = function() {
     $(".tab-list:last").append([HTMLnavContact]);
 };
 
-nav.display();
+navDisplay();
 
-// Format the header
-bio.displayHeader = function() {
-    // Format the row and columns
-    $("#header").addClass(HTMLrow);
-    $("#header").append([HTMLpicCol]);
-    $("#header").append([HTMLbioCol]);
-    $("#header").append([HTMLruleCol]);
-    // Format the content
-    $("#bio-pic-col").append([HTMLbioPic.replace("%data%", bio.bioPic)]);
-    $("#bio-col").append([HTMLheaderName.replace("%data%", bio.name)]);
-    $("#bio-col").append([HTMLheaderRole.replace("%data%", bio.role)]);
-    $("#bio-col").append(
-        [HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage)]);
+// Format the bio
+bio.display = function() {
+
+  // Format the header
+  bioDisplayHeader = function() {
+      // Format the row and columns
+      $("#header").addClass(HTMLrow);
+      $("#header").append([HTMLpicCol]);
+      $("#header").append([HTMLbioCol]);
+      $("#header").append([HTMLruleCol]);
+      // Format the content
+      $("#bio-pic-col").append([HTMLbioPic.replace("%data%", bio.biopic)]);
+      $("#bio-col").append([HTMLheaderName.replace("%data%", bio.name)]);
+      $("#bio-col").append([HTMLheaderRole.replace("%data%", bio.role)]);
+      $("#bio-col").append(
+          [HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage)]);
+  };
+
+  bioDisplayHeader();
+
+  // Format the skills
+  bioDisplaySkills = function() {
+      if (bio.skills) {
+          // Format the row columns
+          $("#skills").addClass(HTMLrow);
+          $("#skills").append([HTMLskillsHeadingCol]);
+          $("#skills").append([HTMLruleCol]);
+          $("#skills-heading-col").append([HTMLskillsCol1]);
+          $("#skills-heading-col").append([HTMLskillsCol2]);
+          // Format the content
+          bio.skills.forEach(function(skill, iSkill) {
+              if (iSkill % 2) {
+                  $("#skills-col2").append([HTMLskill.replace("%data%", skill)]);
+              } else {
+                  $("#skills-col1").append([HTMLskill.replace("%data%", skill)]);
+              }
+          });
+      }
+  };
+
+  bioDisplaySkills();
+
+  // Format the footer and contacts
+  bioDisplayFooter = function() {
+
+      formatFooterCols = function() {
+          // Format the contact row, column and content
+          $("#connect-heading-col").append([HTMLcontactRow]);
+          $(".contact-row:last").append([HTMLcontactStart]);
+          $(".contact-entry:last").append([HTMLcontactIconCol]);
+          $(".contact-entry:last").append([HTMLcontactEntryCol]);
+      };
+
+      formatContactCols = function() {
+          $(".contact-row:last").append([HTMLcontactStart]);
+          $(".contact-entry:last").append([HTMLcontactIconCol]);
+          $(".contact-entry:last").append([HTMLcontactEntryCol]);
+      };
+
+      // Format the Footer
+      $("#lets-connect").addClass(HTMLrow);
+      $("#lets-connect").append([HTMLconnectHeadingCol]);
+      $("#lets-connect").append([HTMLruleCol]);
+
+      formatFooterCols();
+
+      $(".contact-entry:last .contact-icon-col").addClass(HTMLiconOffset);
+      $(".contact-entry:last .contact-icon-col").append([HTMLmobileIcon]);
+      $(".contact-entry:last .contact-entry-col").append([HTMLcontact.replace("%data%", bio.contacts.mobile)]);
+
+      formatContactCols();
+
+      $(".contact-entry:last .contact-icon-col").append([HTMLemailIcon]);
+      $(".contact-entry:last .contact-entry-col").append([HTMLcontact.replace("%data%", bio.contacts.email)]);
+
+      formatFooterCols();
+
+      $(".contact-entry:last .contact-icon-col").addClass(HTMLiconOffset);
+      $(".contact-entry:last .contact-icon-col").append([HTMLtwitterIcon]);
+      $(".contact-entry:last .contact-entry-col").append([HTMLcontact.replace("%data%", bio.contacts.twitter)]);
+
+      formatContactCols();
+
+      $(".contact-entry:last .contact-icon-col").append([HTMLgithubIcon]);
+      $(".contact-entry:last .contact-entry-col").append([HTMLcontact.replace("%data%", bio.contacts.github)]);
+
+      formatFooterCols();
+
+      $(".contact-entry:last .contact-icon-col").addClass(HTMLiconOffset);
+      $(".contact-entry:last .contact-icon-col").append([HTMLblogIcon]);
+      $(".contact-entry:last .contact-entry-col").append([HTMLcontact.replace("%data%", bio.contacts.blog)]);
+
+      formatContactCols();
+
+      $(".contact-entry:last .contact-icon-col").append([HTMLlocationIcon]);
+      $(".contact-entry:last .contact-entry-col").append([HTMLcontact.replace("%data%", bio.contacts.location)]);
+      $("#lets-connect").append([HTMLintlCol]);
+      $("#intlCol").append([intlButton]);
+  };
+
+  bioDisplayFooter();
+
 };
 
-bio.displayHeader();
-
-// Format the skills
-bio.displaySkills = function() {
-    if (bio.skills) {
-        // Format the row columns
-        $("#skills").addClass(HTMLrow);
-        $("#skills").append([HTMLskillsHeadingCol]);
-        $("#skills").append([HTMLruleCol]);
-        $("#skills-heading-col").append([HTMLskillsCol1]);
-        $("#skills-heading-col").append([HTMLskillsCol2]);
-        // Format the content
-        bio.skills.forEach(function(skill, iSkill) {
-            if (iSkill % 2) {
-                $("#skills-col2").append([HTMLskill.replace("%data%", skill)]);
-            } else {
-                $("#skills-col1").append([HTMLskill.replace("%data%", skill)]);
-            }
-        });
-    }
-};
-
-bio.displaySkills();
+bio.display();
 
 // Format the work
 work.display = function() {
@@ -245,11 +312,13 @@ education.display = function() {
             [HTMLschoolDates.replace("%data%", school.dates)]);
         $(".education-entry:last .school-icon-col").append([HTMLschoolIcon]);
         $(".education-entry:last .school-name-col").append(
-            [HTMLschoolName.replace("%data%", school.name)]);
+            [HTMLschoolName.replace("%data%", school.name).replace(
+              "#", school.url)]);
         $(".education-entry:last .school-location-col").append(
             [HTMLschoolLocation.replace("%data%", school.location)]);
         $(".education-entry:last .school-location-col").append(
-            [HTMLschoolURL.replace("%data%", school.url)]);
+            [HTMLschoolURL.replace("%data%", school.url).replace(
+              "#", school.url)]);
         $(".education-entry:last .school-degree-col").append(
             [HTMLschoolDegree.replace("%data%", school.degree)]);
         school.majors.forEach(function(major) {
@@ -277,9 +346,11 @@ education.display = function() {
             $(".course-entry:last .course-title-col").append(
                 [HTMLcourseTitle.replace("%data%", course.title)]);
             $(".course-entry:last .course-school-col").append(
-                [HTMLcourseURL.replace("%data%", course.url)]);
+                [HTMLcourseURL.replace("%data%", course.url).replace(
+                  "#", course.url)]);
             $(".course-entry:last .course-school-col").append(
-                [HTMLcourseSchool.replace("%data%", course.school)]);
+                [HTMLcourseSchool.replace("%data%", course.school).replace(
+                  "#", course.url)]);
         });
     $("#education").append([HTMLruleCol]);
 };
@@ -296,66 +367,6 @@ var displayMap = function() {
 };
 
 displayMap();
-
-// Format the footer and contacts
-bio.displayFooter = function() {
-
-    formatFooterCols = function() {
-        // Format the contact row, column and content
-        $("#connect-heading-col").append([HTMLcontactRow]);
-        $(".contact-row:last").append([HTMLcontactStart]);
-        $(".contact-entry:last").append([HTMLcontactIconCol]);
-        $(".contact-entry:last").append([HTMLcontactEntryCol]);
-    };
-
-    formatContactCols = function() {
-        $(".contact-row:last").append([HTMLcontactStart]);
-        $(".contact-entry:last").append([HTMLcontactIconCol]);
-        $(".contact-entry:last").append([HTMLcontactEntryCol]);
-    };
-
-    // Format the Footer
-    $("#lets-connect").addClass(HTMLrow);
-    $("#lets-connect").append([HTMLconnectHeadingCol]);
-    $("#lets-connect").append([HTMLruleCol]);
-
-    formatFooterCols();
-
-    $(".contact-entry:last .contact-icon-col").addClass(HTMLiconOffset);
-    $(".contact-entry:last .contact-icon-col").append([HTMLmobileIcon]);
-    $(".contact-entry:last .contact-entry-col").append([HTMLcontact.replace("%data%", bio.contacts.mobile)]);
-
-    formatContactCols();
-
-    $(".contact-entry:last .contact-icon-col").append([HTMLemailIcon]);
-    $(".contact-entry:last .contact-entry-col").append([HTMLcontact.replace("%data%", bio.contacts.email)]);
-
-    formatFooterCols();
-
-    $(".contact-entry:last .contact-icon-col").addClass(HTMLiconOffset);
-    $(".contact-entry:last .contact-icon-col").append([HTMLtwitterIcon]);
-    $(".contact-entry:last .contact-entry-col").append([HTMLcontact.replace("%data%", bio.contacts.twitter)]);
-
-    formatContactCols();
-
-    $(".contact-entry:last .contact-icon-col").append([HTMLgithubIcon]);
-    $(".contact-entry:last .contact-entry-col").append([HTMLcontact.replace("%data%", bio.contacts.github)]);
-
-    formatFooterCols();
-
-    $(".contact-entry:last .contact-icon-col").addClass(HTMLiconOffset);
-    $(".contact-entry:last .contact-icon-col").append([HTMLblogIcon]);
-    $(".contact-entry:last .contact-entry-col").append([HTMLcontact.replace("%data%", bio.contacts.blog)]);
-
-    formatContactCols();
-
-    $(".contact-entry:last .contact-icon-col").append([HTMLlocationIcon]);
-    $(".contact-entry:last .contact-entry-col").append([HTMLcontact.replace("%data%", bio.contacts.location)]);
-    $("#lets-connect").append([HTMLintlCol]);
-    $("#intlCol").append([intlButton]);
-};
-
-bio.displayFooter();
 
 // Format the internationalized name
 function inName(myName) {
